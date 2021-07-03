@@ -3,7 +3,7 @@ html {
   font-family: "Annie Use Your Telescope", cursive;
 }
 
-p{
+p {
   color: white;
 }
 
@@ -17,7 +17,7 @@ body {
   overflow-y: hidden;
 }
 
-h1{
+h1 {
   font-size: 5vh;
   padding: 0;
   margin: 0;
@@ -33,7 +33,8 @@ h1{
   overflow-y: hidden;
 }
 
-#landing, #landing_bkg {
+#landing,
+#landing_bkg {
   display: flex;
   flex-direction: column;
   color: white;
@@ -46,16 +47,16 @@ h1{
   z-index: 12;
 }
 
-#landing{
+#landing {
   padding-left: 2vh;
   margin-right: 2vh;
 }
 
-#titulo_landing{
+#titulo_landing {
   margin-top: 15vh;
 }
 
-#descricao_landing{
+#descricao_landing {
   width: 45vh;
   font-size: 2.5vh;
 }
@@ -120,10 +121,10 @@ h1{
   height: 88%;
   object-fit: contain;
   overflow: hidden;
- 
 }
 
-#quiz, #textos {
+#quiz,
+#textos {
   display: none;
   color: white;
   opacity: 0;
@@ -139,11 +140,11 @@ h1{
   background-color: black;
 }
 
-#textos > p{
+#textos > p {
   font-size: 3.5vh;
 }
 
-.respostas{
+.respostas {
   display: none;
   opacity: 0;
   animation-duration: 1s;
@@ -170,7 +171,7 @@ h1{
   align-items: center;
 }
 
-.sem_padding_margin{
+.sem_padding_margin {
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -180,18 +181,19 @@ h1{
   height: 5vh;
 }
 
-.opcao > p, li {  
+.opcao > p,
+li {
   color: white;
   font-size: 3.5vh;
 }
 
-ol{
+ol {
   margin-left: 4vh;
 }
 
 .overlay1 {
   display: block;
-  background-color: green;
+  background-color: #01ea77;
   /* background-color: fuchsia; */
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -213,12 +215,12 @@ ol{
   position: absolute;
   z-index: 2;
 }
+
 #opcao_1a {
-  margin-left: 4.7%;
   top: 44.2%;
   width: 15vh;
   height: 4vh;
-  left: 0%;
+  left: 10%;
 }
 #opcao_1 {
   top: 44.2%;
@@ -226,6 +228,7 @@ ol{
   height: 3.5%;
   left: 0%;
 }
+
 #opcao_2a,
 #opcao_3a,
 #opcao_4a,
@@ -327,7 +330,7 @@ ol{
   width: 5.2vh;
 }
 #opcao_6a,
-#opcao_6{
+#opcao_6 {
   top: 66%;
   height: 1.5vh;
   left: 44%;
@@ -365,7 +368,7 @@ ol{
 #opcao_9_2a,
 #opcao_9_2 {
   top: 34.4%;
-  height: 3vh;
+  height: 3.5vh;
   left: 60%;
   width: 7vh;
 }
@@ -393,7 +396,7 @@ ol{
 #opcao_10a,
 #opcao_10 {
   top: 27%;
-  height: 2.5vh;
+  height: 3vh;
   left: 60%;
   width: 13vh;
 }
@@ -518,9 +521,9 @@ ol{
 #opcao_18_3a,
 #opcao_18_3 {
   top: 81%;
-  width: 8vh;
+  width: 6.4vh;
   height: 4vh;
-  left: 81%;
+  left: 81.6%;
 }
 
 #acerto_alert {
@@ -534,7 +537,8 @@ ol{
   z-index: 15;
 }
 
-#fim_popup, #inicio_popup {
+#fim_popup,
+#inicio_popup {
   display: none;
   opacity: 0;
   animation-duration: 1s;
@@ -553,15 +557,16 @@ ol{
   z-index: 14;
 }
 
-#inicio_popup{
+#inicio_popup {
   height: 90%;
 }
 
-#fim_popup, #inicio_popup > p {
+#fim_popup,
+#inicio_popup > p {
   font-size: 2.5vh;
 }
 
-#inicio_popup{
+#inicio_popup {
   display: flex;
   padding: 2vh 2vh;
   color: white;
@@ -627,7 +632,7 @@ ol{
   width: 19vh;
 }
 
-#botao_iniciar > p{
+#botao_iniciar > p {
   font-size: 3vh;
 }
 
@@ -638,11 +643,14 @@ ol{
 }
 #branco {
   background-color: white;
-  border-color: #01ea77; 
+  border-color: #01ea77;
   position: absolute;
   height: 80%;
-  width: 90%;
-  margin-left: 4.7%;
+  width: 80%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
 #botao_textos {
   margin-top: 1vh;
@@ -650,7 +658,7 @@ ol{
   border-color: #01ea77;
 }
 
-#botao_textos > p{
+#botao_textos > p {
   font-size: 2.5vh;
   color: white;
 }
@@ -691,12 +699,11 @@ ol{
 
 @keyframes mudar {
   from {
-    
     opacity: 1;
   }
 
   to {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
@@ -748,24 +755,22 @@ ol{
 }
 
 @media screen and (orientation: landscape) {
-
-  #landing{
+  #landing {
     background-color: black;
   }
 
-  #landing_bkg{
+  #landing_bkg {
     display: none;
   }
-
 }
 
 @media screen and (orientation: portrait) {
-
-  #landing, #landing_bkg{
+  #landing,
+  #landing_bkg {
     background-color: none;
   }
 
-  #landing_bkg{
+  #landing_bkg {
     left: 0%;
     top: 0;
     transform: scale(4);
