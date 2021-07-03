@@ -41,6 +41,12 @@ iniciar = () => {
     document.getElementById("landing").style.display = "none";
     document.getElementById("landing_bkg").style.display = "none";
   }, 1000);
+
+  if (window.matchMedia("(orientation: landscape)").matches) {
+    tela_quiz()
+  }
+  
+
 };
 
 pos_pop_ini = () => {
