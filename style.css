@@ -488,6 +488,7 @@ ol {
   width: 6vh;
   height: 2.5vh;
   left: 38.5%;
+  border-bottom-right-radius: 50%;
 }
 #opcao_16_2a,
 #opcao_16_2 {
@@ -646,7 +647,7 @@ ol {
   border-color: #01ea77;
   position: absolute;
   height: 80%;
-  width: 80%;
+  width: 90%;
   left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -783,5 +784,9 @@ ol {
     animation: go-back 40s infinite alternate;
     animation-name: wallpaper;
     filter: blur(0.3vh) brightness(55%);
+  }
+
+  #branco{
+    width: 80%;
   }
 }

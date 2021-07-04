@@ -43,10 +43,9 @@ iniciar = () => {
   }, 1000);
 
   if (window.matchMedia("(orientation: landscape)").matches) {
-    tela_quiz()
+    document.getElementById("btn_quiz").style.display = "none"
+    tela_quiz();
   }
-  
-
 };
 
 pos_pop_ini = () => {
@@ -89,18 +88,25 @@ pos_pop_ini = () => {
 
 tela_quiz = () => {
   document.getElementById("textos").style.animationName = "acerto_sumir";
-  document.getElementById("container").style.animationName = "acerto_sumir";
+
+  if (!window.matchMedia("(orientation: landscape)").matches) {
+    document.getElementById("container").style.animationName = "acerto_sumir";
+  }
+
   document.getElementById("relogio").style.animationName = "acerto_sumir";
 
   setTimeout(() => {
     document.getElementById("textos").style.display = "none";
-    document.getElementById("container").style.display = "none";
-    document.getElementById("relogio").style.display = "none";
-    document.getElementById("relogio").innerHTML = "";
 
-    document.getElementById("relogio_upper").style.animationName = "acerto";
-    document.getElementById("relogio_upper").innerHTML =
-      "<p id='txt_relogio'></p>";
+    if (!window.matchMedia("(orientation: landscape)").matches) {
+      document.getElementById("container").style.display = "none";
+      document.getElementById("relogio").style.display = "none";
+      document.getElementById("relogio").innerHTML = "";
+
+      document.getElementById("relogio_upper").style.animationName = "acerto";
+      document.getElementById("relogio_upper").innerHTML =
+        "<p id='txt_relogio'></p>";
+    }
 
     document.getElementById("btn_home").className = "material-icons icons";
     document.getElementById("btn_resolucao").className = "material-icons icons";
@@ -161,7 +167,11 @@ tela_quiz = () => {
 };
 
 tela_home = () => {
+
+  if (!window.matchMedia("(orientation: landscape)").matches) {
   document.getElementById("quiz").style.animationName = "acerto_sumir";
+  }
+
   document.getElementById("textos").style.animationName = "acerto_sumir";
   document.getElementById("relogio").style.animationName = "acerto";
 
@@ -173,7 +183,10 @@ tela_home = () => {
     document.getElementById("btn_quiz").className = "material-icons icons";
     document.getElementById("btn_resolucao").className = "material-icons icons";
 
+    if (!window.matchMedia("(orientation: landscape)").matches) {
     document.getElementById("quiz").style.display = "none";
+    }
+
     document.getElementById("textos").style.display = "none";
     document.getElementById("relogio_upper").innerHTML = "";
 
@@ -185,9 +198,11 @@ tela_home = () => {
 
 tela_textos = () => {
   if (tempo <= 0 || acertos.length == 18 || tempo == undefined) {
-
-    document.getElementById("navbar").innerHTML +=
-    "<span class='material-icons icons' onclick='window.location.reload()'>replay</span>";
+    
+    if(!document.getElementById('replay')){
+      document.getElementById("navbar").innerHTML +=
+      "<span class='material-icons icons' id='replay' onclick='window.location.reload()'>replay</span>";
+    }
 
     clearInterval(timer);
     console.log(tempo);
@@ -233,9 +248,9 @@ verificador = (valor, correto, id_texto, id_select) => {
     document.getElementById(id_select).style.color = "#BFBFBF";
     document.getElementById(id_select).disabled = "true";
     let opcao_id_img = "opcao_" + correto;
-    let aopcao_id_img = "opcao_" + correto+"a";
+    let aopcao_id_img = "opcao_" + correto + "a";
     acertos.push(correto);
-    acerto(opcao_id_img,aopcao_id_img);
+    acerto(opcao_id_img, aopcao_id_img);
   } else {
     document.getElementById(id_texto).style.color = "#fe0000";
     document.getElementById(id_select).style.color = "#fe0000";
@@ -244,9 +259,7 @@ verificador = (valor, correto, id_texto, id_select) => {
   console.log(id_texto, id_select, valor, correto);
 };
 
-acerto = (opcao_id_img,aopcao_id_img) => {
- 
-
+acerto = (opcao_id_img, aopcao_id_img) => {
   document.getElementById("acerto_alert").style.borderColor = "#01ea77";
   document.getElementById("acerto_alert").innerHTML =
     "<span class='material-icons acerto'> check_circle </span>";
@@ -263,8 +276,12 @@ acerto = (opcao_id_img,aopcao_id_img) => {
   setTimeout(() => {
     let aopcao = document.getElementById(aopcao_id_img);
     aopcao.style.animationName = "mudar";
-    },10000);
-  tela_home();
+  }, 10000);
+
+  if (!window.matchMedia("(orientation: landscape)").matches) {
+    tela_home();
+  }
+
   setTimeout(() => {
     if (
       opcao_id_img == "opcao_2" ||
@@ -274,6 +291,7 @@ acerto = (opcao_id_img,aopcao_id_img) => {
       opcao_id_img == "opcao_7" ||
       opcao_id_img == "opcao_9" ||
       opcao_id_img == "opcao_10" ||
+      opcao_id_img == "opcao_11" ||
       opcao_id_img == "opcao_14" ||
       opcao_id_img == "opcao_15" ||
       opcao_id_img == "opcao_16" ||
@@ -388,8 +406,10 @@ fim_popup = (estado) => {
 };
 
 show_respostas = (elemento) => {
-  document.getElementById(elemento.id).nextElementSibling.style.display = 'flex';
-  document.getElementById(elemento.id).nextElementSibling.style.animationName = 'acerto'
+  document.getElementById(elemento.id).nextElementSibling.style.display =
+    "flex";
+  document.getElementById(elemento.id).nextElementSibling.style.animationName =
+    "acerto";
 };
 
 // Fim Ações
