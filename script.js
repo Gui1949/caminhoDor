@@ -610,6 +610,7 @@ function modala(v) {
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 20:
+      
       $('#modalativo').empty();
       document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
