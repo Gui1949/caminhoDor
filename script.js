@@ -449,153 +449,172 @@ window.onclick = function(event) {
 }
 function modalf() {
 
-document.getElementById("modalativo").style.animationName ="acerto_sumir";}
+document.getElementById("modalativo").style.animationName ="bmodal";}
 function modala(v) {
 
   
   switch (v) {
     case 1:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>1 - Mão Direita</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>A mão direita sofre uma lesão evidente e as células imunológicas reagem. Quando uma célula é danificada, incluindo as células da pele, elas começam a liberar citocinas pró-inflamatórias. Estas fomentam a liberação de prostaglandinas no local da lesão ou infecção de tecidos. As prostaglandinas controlam o processo da inflamação, entre outros.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
         
     break;
     case 2:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>2 - Células danificadas inflamadas/Fibras nervosas sensoriais</h1>";
+      document.getElementById("modalativo").innerHTML += " <h1>Fibras nervosas sensoriais</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>Neurofibras sensoriais existem em todo o corpo e vão responder às prostaglandinas.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 3:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>3 - Neurônio de 1ª ordem</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>O neurônio de 1ª ordem leva sinal de perigo à medula espinhal para o corno dorsal.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 4:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>4 - Substância P</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>Um neuropeptídeo que age como neurotransmissor e neuromodulador. No processo da dor, a Substância P transmite sinais nociceptivos por meio de fibras aferentes primárias para neurônios de segunda ordem da coluna e do tronco cerebral.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 5:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>5 - Corno Dorsal</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>A substância cinzenta está localizada na parte interna da medula espinhal. A medula espinhal é o primeiro local de retransmissão na transmissão de informações nociceptivas da periferia para o cérebro. É o lugar onde os corpos neuronais estão localizados e onde as informações são processadas. Ela está configurada em diferentes cornos: ventral, dorsal, lateral e intermédio. O Corno Dorsalespinhal é o responsável pelas informações sensoriais. Os sinais sensoriais são transmitidos da periferia por fibras aferentes primárias para o corno dorsal da medula espinhal, onde esses aferentes fazem sinapses com neurônios intrínsecos do corno dorsal espinhal.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 6:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>6 - Sinapse</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>Dentro do Corno Dorsal, o neurônio de 1ª ordem faz sinapse e retransmite o sinal de perigo para o neurônio de 2ª ordem (8 precisa  ser destacado).</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 7:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
-      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.borderColor = "#01ea77";
+      document.getElementById("modalativo").innerHTML += " <h1>7 - Neurônio de 2ª ordem</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>Neurônio de 2ª ordem, cruza para o lado oposto e sobe pelo trato espinotalâmico, através do tronco encefálico e na direção do tálamo, no encéfalo.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 8:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>8 - Trato espinotalâmico</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>Trato espinotalâmico para o tálamo (ver nociceptor doc)</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 9:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>9 - Tronco cerebral</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>Tronco cerebral composto de três componentes:</p>";
+      document.getElementById("modalativo").innerHTML += "<ol> <li>Mesencéfalo</li> <li>Ponte</li> <li>Medula</li> </ol>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 10:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
-      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"
+      document.getElementById("modalativo").innerHTML += " <h1>10 - Via Ascendente</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>A via ascendente é responsável por transmitir sinais de dor para a dor, para o córtex somatossensorial a dor.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 11:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>11 - Via Descendente";
+      document.getElementById("modalativo").innerHTML += "<p> A via descendente controla / inibe a via ascendente, modulando a dor antes de chegar a níveis superiores do Sistema Nervoso Central. Uma rede modulatória central da dor inclui o giro cingulado, cinza periaquedutal, tegmento pontino dorsolateral e medula ventromedial. Essas áreas exercem efeitos antinociceptivos ou pronociceptivos por meio de vias descendentes que utilizam serotonina, norepinefrina ou dopamina como seus neurotransmissores primários.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 12:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>12 - Tálamo";
+      document.getElementById("modalativo").innerHTML += "<p> No tálamo, o neurônio de 2ª ordem faz sinapse com o neurônio de 3ªordem. ";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 13:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>13 - Neurônio de 3ª ordem</h1>";
+      document.getElementById("modalativo").innerHTML += "<p> O neurônio de 3ª ordem carrega o sinal de ameaça e a retransmite para a região do cérebro que se correlaciona com a MÃO DIREITA lesionada.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 14:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>14 - Percepção da Dor";
+      document.getElementById("modalativo").innerHTML += "<p>Sensação no lado oposto do cérebro onde o estímulo ocorreu.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     case 15:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>15 - Córtex Cerebral</h1>";
+      document.getElementById("modalativo").innerHTML += '<p>O córtex cerebral é onde a percepção da dor é percebida. Os estudos de imagens cerebrais revisados ​​aqui indicam o substrato cortical e sub-cortical que sustenta a percepção da dor. Em vez de localizar um "centro de dor" no cérebro, estudos de neuroimagem identificam uma rede de estruturas somatossensoriais (S1, S2, IC), límbicas (IC,      ACC) e associativas (PFC) que recebem entradas paralelas de múltiplas vias nociceptivas.</p>';
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 16:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>16 - Neurotrans 5HT/NA</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>Neurotransmissores influenciam a modulação facilitadora ou inibidora da transmissão do impulso doloroso a nível da medula espinhal. Os mais importantes no sistema descendente são a serotonina (5-HT), noradrenalina (NA) e opioides endógenos.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 17:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>17 - Interneurônio";
+      document.getElementById("modalativo").innerHTML += "<p> A liberação da Substância P estimula um pequeno interneurônio, que libera um opioide endógeno chamado encefalina.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     case 18:
       $('#modalativo').empty();
-      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77"; 
-      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
-      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += " <h1>18 - Encefalinas</h1>";
+      document.getElementById("modalativo").innerHTML += "<p>As encefalinas são chamadas de ligantes endógenos, pois são derivadas internamente e se ligam aos receptores opióides do corpo. Elas tem importante papel ao regular a nocicepção no corpo:</p>";
+      document.getElementById("modalativo").innerHTML += '<ol type="a"> <li>Inibindo a liberação da substância P.</li> <li>Inibindo a despolarização do neurônio pós-sináptico, detendo a sinalização para o tálamo.</li></ol>';
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 19:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += " <h1>3 - Neurônio de 1ª Ordem";
+      document.getElementById("modalativo").innerHTML += "<p>O Núcleo Supraótico (NSO) traz um Action Potencial (AP) e estimula vesículas a liberar conteúdo (Substância P).</p>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 20:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += " <h1>4 - Substância P ";
+      document.getElementById("modalativo").innerHTML += "<p>  A Substância P estimula o Núcleo Supraótico (NSO) e propaga o impulso até o tálamo.</p>";
       document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
     break;
     default:

@@ -215,7 +215,7 @@ ol {
   position: absolute;
   z-index: 2;
 }
-
+h1{color:white}
 #opcao_1a {
   top: 44.2%;
   width: 15vh;
@@ -979,16 +979,7 @@ ol {
   position: absolute;
  
 }
-#modalativo {
-  height: auto;
-  opacity: 0;
-  align-self: flex-end;
-  position: absolute;
-  top: 23%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 15;
-}
+
 #modalativo > p {
   color: white;
   padding: 0 0.5vh;
@@ -1003,8 +994,16 @@ ol {
   background-color: #000000;
   width: 60%;
   padding: 1vh 1vh;
-  animation-duration: 2s;
+ 
   animation-fill-mode: forwards;
+  top: 29%;
+  height: auto;
+  opacity: 0;
+  align-self: flex-end;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 #femodal {
   border-color: #01ea77;
@@ -1041,4 +1040,26 @@ ol {
   to {
     z-index: 2;
   }
+}
+@keyframes amodal {
+  from {
+    z-index: 0;
+    opacity: 0;
+  }
+
+  to {
+    z-index: 9;
+    opacity: 1;
+}
+}
+@keyframes bmodal {
+  from {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  to {
+    z-index: 0;
+    opacity: 0;
+}
 }
