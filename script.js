@@ -248,9 +248,10 @@ verificador = (valor, correto, id_texto, id_select) => {
     document.getElementById(id_select).style.color = "#BFBFBF";
     document.getElementById(id_select).disabled = "true";
     let opcao_id_img = "opcao_" + correto;
-    let aopcao_id_img = "opcao_" + correto + "a";
+    let verde = "opcao_" + correto + "a";
+    let modal = "modal_"+correto;
     acertos.push(correto);
-    acerto(opcao_id_img, aopcao_id_img);
+    acerto(opcao_id_img, verde,modal);
   } else {
     document.getElementById(id_texto).style.color = "#fe0000";
     document.getElementById(id_select).style.color = "#fe0000";
@@ -259,7 +260,7 @@ verificador = (valor, correto, id_texto, id_select) => {
   console.log(id_texto, id_select, valor, correto);
 };
 
-acerto = (opcao_id_img, aopcao_id_img) => {
+acerto = (opcao_id_img, verde,modal) => {
   document.getElementById("acerto_alert").style.borderColor = "#01ea77";
   document.getElementById("acerto_alert").innerHTML =
     "<span class='material-icons acerto'> check_circle </span>";
@@ -274,9 +275,16 @@ acerto = (opcao_id_img, aopcao_id_img) => {
 
   console.log(opcao_id_img);
   setTimeout(() => {
-    let aopcao = document.getElementById(aopcao_id_img);
+    let aopcao = document.getElementById(verde);
     aopcao.style.animationName = "mudar";
   }, 10000);
+
+//modal----------------------------------------------------------------
+  let omodal = document.getElementById(modal);
+  omodal.style.animationName = "fmodal";
+ 
+//modal---------------------------------------------------------------------------------------------
+
 
   if (!window.matchMedia("(orientation: landscape)").matches) {
     tela_home();
@@ -413,3 +421,185 @@ show_respostas = (elemento) => {
 };
 
 // Fim Ações
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function modalf() {
+
+document.getElementById("modalativo").style.animationName ="acerto_sumir";}
+function modala(v) {
+
+  
+  switch (v) {
+    case 1:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+        
+    break;
+    case 2:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 3:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 4:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 5:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 6:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 7:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 8:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 9:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 10:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 11:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 12:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 13:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 14:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    case 15:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 16:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 17:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    case 18:
+      $('#modalativo').empty();
+      document.getElementById("modalativo").style.animationName = "acerto";
+      document.getElementById("modalativo").style.borderColor = "#01ea77"; 
+      document.getElementById("modalativo").innerHTML += "<p>mlk eu sodssssssssssssssssssssssssssu bom</p>";
+      document.getElementById("modalativo").innerHTML += "<br>";
+      document.getElementById("modalativo").innerHTML += "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+    break;
+    default:
+      text = "Looking forward to the Weekend";
+  } 
+
+}
