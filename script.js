@@ -40,6 +40,7 @@ iniciar = () => {
   setTimeout(() => {
     document.getElementById("landing").style.display = "none";
     document.getElementById("landing_bkg").style.display = "none";
+    document.getElementById("branco").style.display = "flex"
   }, 1000);
 
   if (window.matchMedia("(orientation: landscape)").matches) {

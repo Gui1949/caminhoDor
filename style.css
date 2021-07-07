@@ -649,6 +649,7 @@ h1{color:white}
 }
 #branco {
   background-color: white;
+  display: none;
   border-color: #01ea77;
   position: absolute;
   height: 80%;
