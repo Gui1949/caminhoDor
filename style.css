@@ -34,11 +34,12 @@ h1 {
   position: fixed;
 
   background-color: #000000;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #landing,
 #landing_bkg {
+  background-color: black;
   display: flex;
   flex-direction: column;
   color: white;
@@ -88,8 +89,8 @@ h1 {
 
 #content {
   display: flex;
-  max-width: 60vh;
-  min-width: 60vh;
+  max-width: 50vh;
+  min-width: 50vh;
   
   object-fit: contain;
   height: 100%;
@@ -113,7 +114,8 @@ h1 {
 #container {
   max-height: 82vh;
   min-height: 82vh;
-  margin-left: 6.5vh;
+  margin-right: auto; 
+  margin-left: auto;
   max-width: 50vh;
   min-width: 50vh;
   flex-wrap: wrap;
@@ -310,8 +312,8 @@ h1 {
 #opcao_3_1 {
   top: 58.1%;
   height: 2.3vh;
-  left: 36%;
-  width: 6vh;
+  left: 35%;
+  width: 5vh;
 }
 #opcao_3_2a,
 #opcao_3_2 {
@@ -323,11 +325,11 @@ h1 {
 }
 #opcao_4_1a,
 #opcao_4_1 {
-  top: 51.9%;
-  height: 1.5vh;
-  left: 33%;
-  width: 6.2vh;
-  transform: rotate(-36deg);
+  top: 51.7%;
+    height: 1.5vh;
+    left: 32%;
+    width: 6.7vh;
+    transform: rotate(-32deg)
 }
 #opcao_4_2a,
 #opcao_4_2 {
@@ -556,9 +558,9 @@ h1 {
 #opcao_18_3a,
 #opcao_18_3 {
   top: 81%;
-  width: 6.4vh;
-  height: 4vh;
-  left: 81.9%;
+    width: 5.3vh;
+    height: 4vh;
+    left: 83.9%;
 }
 
 #acerto_alert {
@@ -804,6 +806,11 @@ h1 {
     width: 70vh;
     opacity: 1;
   }
+}
+  @media screen and (orientation: portrait) {
+    #content { 
+      overflow-x: hidden;
+    }
 
   #landing {
     background-color: black;
