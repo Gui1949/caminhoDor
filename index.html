@@ -6,7 +6,7 @@
     <script src="./script.js"></script>
 
     <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
       type="text/javascript"
     ></script>
     <link rel="stylesheet" href="style.css" />
@@ -42,32 +42,15 @@
         <div id="modalativo"></div>
         <div id="inicio_popup">
           <h1>Como Jogar?</h1>
-          <p id="intro">
-            Cada número na imagem representa uma etapa no Caminho da Dor.
-            <br />
-            <br />
-            As etapas foram listadas aleatoriamente na tela
-            <span class="material-icons texto"> quiz </span>. O desafio consiste
-            em relacionar corretamente todas as etapas com seus respectivos
-            números na tela <span class="material-icons texto"> home </span>.
+          <p>
+            Cada número na imagem representa uma etapa no Caminho da Dor. 
+            As etapas foram listadas aleatoriamente na tela <span class="material-icons texto"> quiz </span>.
+            O desafio consiste em relacionar corretamente todas as etapas com seus respectivos números na tela <span class="material-icons texto"> home </span>. 
             Pode se começar por qualquer número/etapa.
-            <br />
-            <br />
             O limite de tempo é de 10 minutos.
-            <br />
-            <br />
-            Após cada acerto, é possível se obter uma explicação clicando duas
-            vezes no respectivo número.
-            <br />
-            <br />
-            Completado o desafio ou exaurido o tempo, é possível acessar uma
-            relação de todas as etapas e suas explicações na tela
-            <span class="material-icons texto">question_answer</span>.
-            <br />
-            <br />
-            O desafio pode ser repetido quantas vezes quiser, sempre começando
-            do zero, clicando na tela
-            <span class="material-icons texto">replay</span>.
+            Após cada acerto, é possível se obter uma explicação clicando duas vezes no respectivo número.
+            Completado o desafio ou exaurido o tempo, é possível acessar uma relação de todas as etapas e suas explicações na tela <span class="material-icons texto">question_answer</span>.
+            O desafio pode ser repetido quantas vezes quiser, sempre começando do zero, clicando na tela <span class="material-icons texto">replay</span>.
           </p>
           <div
             id="botao_iniciar"
@@ -79,13 +62,14 @@
         </div>
 
         <div id="fim_popup"></div>
-
+        
         <div id="acerto_alert"></div>
         <div id="relogio"><p id="txt_relogio"></p></div>
         <div id="relogio_upper"></div>
 
         <div id="container">
-          <div id="branco"></div>
+          <div id="branco">
+          </div>
           <div id="opcao_1a" class="overlay1"></div>
 
           <div id="opcao_2a">
@@ -104,7 +88,7 @@
           </div>
 
           <div id="opcao_5a" class="overlay1"></div>
-
+          
           <div id="opcao_6a" class="overlay1"></div>
 
           <div id="opcao_7a">
@@ -159,9 +143,16 @@
             <div id="opcao_18_3a" class="overlay1"></div>
           </div>
 
-          <img src="./caminho.png" id="caminho" style="z-index: 2" alt="" />
+          <img src="./caminho.png" id="caminho" style="z-index: 2;"alt="" />
 
-          <div id="opcao_1" class="overlay"></div>
+
+          <div id="opcao_1" class="overlay"><div id="opcao_1" class="overlay" style="
+            width: 5vh;
+            z-index: 2;
+            height: 1vh;
+            top: 84.8%;
+            left: 52%;"></div>
+            </div>
 
           <div id="opcao_2">
             <div id="opcao_2_1" class="overlay"></div>
@@ -179,8 +170,10 @@
           </div>
 
           <div id="opcao_5" class="overlay"></div>
-
-          <div id="opcao_6" class="overlay"></div>
+          
+          <div id="opcao_6" class="overlay">
+            <div id="opcao_6_1" class="overlay"></div>
+          </div>
 
           <div id="opcao_7">
             <div id="opcao_7_1" class="overlay"></div>
@@ -204,7 +197,9 @@
             <div id="opcao_11_2" class="overlay"></div>
           </div>
 
-          <div id="opcao_12" class="overlay"></div>
+          <div id="opcao_12" class="overlay">
+            <div id="opcao_12_1" class="overlay"></div>
+          </div>
 
           <div id="opcao_13" class="overlay"></div>
 
@@ -218,6 +213,7 @@
             <div id="opcao_15_1" class="overlay"></div>
             <div id="opcao_15_2" class="overlay"></div>
             <div id="opcao_15_3" class="overlay"></div>
+            <div id="opcao_15_3" class="overlay" style=" border-top-right-radius: 3%; width: 0.4vh; left: 11.9vh;  top: 17.6vh;"></div>
             <div id="opcao_15_4" class="overlay"></div>
           </div>
 
@@ -233,70 +229,99 @@
             <div id="opcao_18_2" class="overlay"></div>
             <div id="opcao_18_3" class="overlay"></div>
           </div>
-
-          <!-- modaldoido-->
-
-          <div id="modal_1" class="modal" onclick="modala(1)"></div>
-          <div id="modal_2" class="modal" onclick="modala(2)"></div>
+          <!-- modaldoido--> 
+          
+          <div id="modal_1"class="modal"onclick="modala(1)">
+            
+          </div>
+          <div id="modal_2"class="modal">
+            
+          </div>
           <div id="modal_3">
-            <div id="modal_3a" class="modal" onclick="modala(3)"></div>
-            <div id="modal_3b" class="modal" onclick="modala(19)"></div>
+            <div id="modal_3a" class="modal"onclick="modala(3)"></div>
+            <div id="modal_3b" class="modal"onclick="modala(19)"></div>
+            
           </div>
           <div id="modal_4">
-            <div id="modal_4a" class="modal" onclick="modala(4)"></div>
-            <div id="modal_4b" class="modal" onclick="modala(20)"></div>
+            <div id="modal_4a" class="modal"onclick="modala(4)"></div>
+            <div id="modal_4b" class="modal"onclick="modala(20)"></div>
           </div>
-          <div id="modal_5" class="modal" onclick="modala(5)"></div>
-          <div id="modal_6" class="modal" onclick="modala(6)"></div>
+          <div id="modal_5"class="modal"onclick="modala(5)">
+            
+          </div>
+          <div id="modal_6"class="modal"onclick="modala(6)">
+            
+          </div>
 
-          <div id="modal_7" class="modal" onclick="modala(7)"></div>
-          <div id="modal_8" class="modal" onclick="modala(8)"></div>
-          <div id="modal_9" class="modal" onclick="modala(9)"></div>
-          <div id="modal_10" class="modal" onclick="modala(10)"></div>
-          <div id="modal_11" class="modal" onclick="modala(11)"></div>
-          <div id="modal_12" class="modal" onclick="modala(12)"></div>
-          <div id="modal_13" class="modal" onclick="modala(13)"></div>
-          <div id="modal_14" class="modal" onclick="modala(14)"></div>
-          <div id="modal_15" class="modal" onclick="modala(15)"></div>
+          <div id="modal_7"class="modal"onclick="modala(7)">
+
+          </div>
+          <div id="modal_8"class="modal"onclick="modala(8)">
+            
+          </div>
+          <div id="modal_9"class="modal"onclick="modala(9)">
+            
+          </div>
+          <div id="modal_10"class="modal"onclick="modala(10)">
+            
+          </div>
+          <div id="modal_11"class="modal"onclick="modala(11)">
+            
+          </div>
+          <div id="modal_12"class="modal"onclick="modala(12)">
+            
+          </div>
+          <div id="modal_13"class="modal"onclick="modala(13)">
+            
+          </div>
+          <div id="modal_14"class="modal"onclick="modala(14)">
+            
+          </div>
+          <div id="modal_15"class="modal"onclick="modala(15)">
+            
+          </div>
           <div id="modal_16">
-            <div id="modal_16a" class="modal" onclick="modala(16)"></div>
-            <div id="modal_16b" class="modal" onclick="modala(16)"></div>
+            <div id="modal_16a" class="modal"onclick="modala(16)"></div>
+            <div id="modal_16b" class="modal"onclick="modala(16)"></div>
+          </div>
+         
+          <div id="modal_17"class="modal"onclick="modala(17)">
+            
+          </div>
+          <div id="modal_18"class="modal"onclick="modala(18)">
+            
           </div>
 
-          <div id="modal_17" class="modal" onclick="modala(17)"></div>
-          <div id="modal_18" class="modal" onclick="modala(18)"></div>
 
-          <!-- modaldoido-->
-          
+
+           <!-- modaldoido-->
+
+         
+
+
+
         </div>
         <div id="quiz"></div>
-        <div id="textos">
+        <div id="textos">          
           <h1 id="maodireita" onclick="show_respostas(this)">
-            1 - Mão Direita
-          </h1>
+          1 - Mão Direita</h1>
+            <p class="respostas">
+              A mão direita sofre uma lesão evidente e as células imunológicas
+              reagem. Quando uma célula é danificada, incluindo as células da
+              pele, elas começam a liberar citocinas pró-inflamatórias. Estas
+              fomentam a liberação de prostaglandinas no local da lesão ou
+              infecção de tecidos. As prostaglandinas controlam o processo da
+              inflamação, entre outros.
+            </p>
+
+          <h1 id="celdanif" onclick="show_respostas(this)">2 - Células danificadas inflamadas/Fibras nervosas sensoriais</h1>
           <p class="respostas">
-            A mão direita sofre uma lesão evidente e as células imunológicas
-            reagem. Quando uma célula é danificada, incluindo as células da
-            pele, elas começam a liberar citocinas pró-inflamatórias. Estas
-            fomentam a liberação de prostaglandinas no local da lesão ou
-            infecção de tecidos. As prostaglandinas controlam o processo da
-            inflamação, entre outros.
+            Neurofibras sensoriais existem em todo o corpo e vão responder às prostaglandinas.
           </p>
 
-          <h1 id="celdanif" onclick="show_respostas(this)">
-            2 - Células danificadas inflamadas/Fibras nervosas sensoriais
-          </h1>
+          <h1 id="neur_prim" onclick="show_respostas(this)">3 - Neurônio de 1ª ordem</h1>
           <p class="respostas">
-            Neurofibras sensoriais existem em todo o corpo e vão responder às
-            prostaglandinas.
-          </p>
-
-          <h1 id="neur_prim" onclick="show_respostas(this)">
-            3 - Neurônio de 1ª ordem
-          </h1>
-          <p class="respostas">
-            O neurônio de 1ª ordem leva sinal de perigo à medula espinhal para o
-            corno dorsal.
+            O neurônio de 1ª ordem leva sinal de perigo à medula espinhal para o corno dorsal.
           </p>
 
           <h1 id="subst_p" onclick="show_respostas(this)">4 - Substância P</h1>
@@ -307,9 +332,7 @@
             da coluna e do tronco cerebral.
           </p>
 
-          <h1 id="corno_dors" onclick="show_respostas(this)">
-            5 - Corno Dorsal
-          </h1>
+          <h1 id="corno_dors" onclick="show_respostas(this)">5 - Corno Dorsal</h1>
           <p class="respostas">
             A substância cinzenta está localizada na parte interna da medula
             espinhal. A medula espinhal é o primeiro local de retransmissão na
@@ -331,25 +354,17 @@
             ser destacado).
           </p>
 
-          <h1 id="neur_seg" onclick="show_respostas(this)">
-            7 - Neurônio de 2ª ordem
-          </h1>
+          <h1 id="neur_seg" onclick="show_respostas(this)">7 - Neurônio de 2ª ordem</h1>
           <p class="respostas">
             Neurônio de 2ª ordem, cruza para o lado oposto e sobe pelo trato
             espinotalâmico, através do tronco encefálico e na direção do tálamo,
             no encéfalo.
           </p>
 
-          <h1 id="trat_espin" onclick="show_respostas(this)">
-            8 - Trato espinotalâmico
-          </h1>
-          <p class="respostas">
-            Trato espinotalâmico para o tálamo (ver nociceptor doc)
-          </p>
+          <h1 id="trat_espin" onclick="show_respostas(this)">8 - Trato espinotalâmico</h1>
+          <p class="respostas">Trato espinotalâmico para o tálamo (ver nociceptor doc)</p>
 
-          <h1 id="tronco_cere" onclick="show_respostas(this)">
-            9 - Tronco cerebral
-          </h1>
+          <h1 id="tronco_cere" onclick="show_respostas(this)">9 - Tronco cerebral</h1>
           <div class="respostas">
             <p class="sem_padding_margin">
               Tronco cerebral composto de três componentes:
@@ -361,17 +376,12 @@
             </ol>
           </div>
 
-          <h1 id="via_asc" onclick="show_respostas(this)">
-            10 - Via Ascendente
-          </h1>
+          <h1 id="via_asc" onclick="show_respostas(this)">10 - Via Ascendente</h1>
           <p class="respostas">
-            A via ascendente é responsável por transmitir sinais de dor para a
-            dor, para o córtex somatossensorial a dor.
+            A via ascendente é responsável por transmitir sinais de dor para a dor, para o córtex somatossensorial a dor.
           </p>
 
-          <h1 id="via_desc" onclick="show_respostas(this)">
-            11 - Via Descendente
-          </h1>
+          <h1 id="via_desc" onclick="show_respostas(this)">11 - Via Descendente</h1>
           <p class="respostas">
             A via descendente controla / inibe a via ascendente, modulando a dor
             antes de chegar a níveis superiores do Sistema Nervoso Central. Uma
@@ -388,25 +398,17 @@
             ordem.
           </p>
 
-          <h1 id="neur_terc" onclick="show_respostas(this)">
-            13 - Neurônio de 3ª ordem
-          </h1>
+          <h1 id="neur_terc" onclick="show_respostas(this)">13 - Neurônio de 3ª ordem</h1>
           <p class="respostas">
             O neurônio de 3ª ordem carrega o sinal de ameaça e a retransmite
             para a região do cérebro que se correlaciona com a MÃO DIREITA
             lesionada.
           </p>
 
-          <h1 id="percep" onclick="show_respostas(this)">
-            14 - Percepção da Dor
-          </h1>
-          <p class="respostas">
-            Sensação no lado oposto do cérebro onde o estímulo ocorreu
-          </p>
+          <h1 id="percep" onclick="show_respostas(this)">14 - Percepção da Dor</h1>
+          <p class="respostas">Sensação no lado oposto do cérebro onde o estímulo ocorreu</p>
 
-          <h1 id="cortex" onclick="show_respostas(this)">
-            15 - Córtex Cerebral
-          </h1>
+          <h1 id="cortex" onclick="show_respostas(this)">15 - Córtex Cerebral</h1>
           <p class="respostas">
             O córtex cerebral é onde a percepção da dor é percebida. Os estudos
             de imagens cerebrais revisados ​​aqui indicam o substrato cortical e
@@ -417,9 +419,7 @@
             múltiplas vias nociceptivas.
           </p>
 
-          <h1 id="neurotrans" onclick="show_respostas(this)">
-            16 - Neurotrans 5HT/NA
-          </h1>
+          <h1 id="neurotrans" onclick="show_respostas(this)">16 - Neurotrans 5HT/NA</h1>
           <p class="respostas">
             Neurotransmissores influenciam a modulação facilitadora ou inibidora
             da transmissão do impulso doloroso a nível da medula espinhal. Os
@@ -437,17 +437,13 @@
 
           <hr />
 
-          <h1 id="neur_ter_zoom" onclick="show_respostas(this)">
-            3 - Neurônio de 1ª Ordem
-          </h1>
+          <h1 id='neur_ter_zoom' onclick="show_respostas(this)">3 - Neurônio de 1ª Ordem</h1>
           <p class="respostas">
             O Núcleo Supraótico (NSO) traz um Action Potencial (AP) e estimula
             vesículas a liberar conteúdo (Substância P).
           </p>
 
-          <h1 id="subs_p_zoom" onclick="show_respostas(this)">
-            4 - Substância P (igual a 18 anterior)
-          </h1>
+          <h1 id="subs_p_zoom" onclick="show_respostas(this)">4 - Substância P (igual a 18 anterior)</h1>
           <p class="respostas">
             A Substância P estimula o Núcleo Supraótico (NSO) e propaga o
             impulso até o tálamo.
@@ -463,8 +459,8 @@
           <div class="respostas">
             <p class="sem_padding_margin">
               As encefalinas são chamadas de ligantes endógenos, pois são
-              derivadas internamente e se ligam aos receptores opióides do
-              corpo. Elas tem importante papel ao regular a nocicepção no corpo:
+              derivadas internamente e se ligam aos receptores opióides do corpo.
+              Elas tem importante papel ao regular a nocicepção no corpo:
             </p>
             <ol type="a">
               <li>Inibindo a liberação da substância P.</li>
