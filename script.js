@@ -30,7 +30,6 @@ let textos_obj = {
 let timer = "";
 
 // Swipe
-//Telas
 function swipedetect(el, callback) {
   var touchsurface = el,
     swipedir,
@@ -104,12 +103,12 @@ iniciar = () => {
   document.getElementById("inicio_popup").style.animationName = "acerto";
 
   let el = document.getElementById("container");
-  swipedetect(el, function (swipedir) {
-    // swipedir contains either "none", "left", "right", "top", or "down"
-    if (swipedir == "left") {
-      tela_quiz();
-    }
-  });
+  // swipedetect(el, function (swipedir) {
+  //   // swipedir contains either "none", "left", "right", "top", or "down"
+  //   if (swipedir == "left") {
+  //     tela_quiz();
+  //   }
+  // });
 
   setTimeout(() => {
     document.getElementById("landing").style.display = "none";
@@ -279,12 +278,12 @@ tela_textos = () => {
     }
 
     let el = document.getElementById("textos");
-    swipedetect(el, function (swipedir) {
-      // swipedir contains either "none", "left", "right", "top", or "down"
-      if (swipedir == "right") {
-        tela_quiz();
-      }
-    });
+    // swipedetect(el, function (swipedir) {
+    //   // swipedir contains either "none", "left", "right", "top", or "down"
+    //   if (swipedir == "right") {
+    //     tela_quiz();
+    //   }
+    // });
 
     clearInterval(timer);
     console.log(tempo);
@@ -450,7 +449,7 @@ erro = (texto) => {
   }
 
   setTimeout(() => {
-    document.getElementById("acerto_alert").style.display = "flex"
+    document.getElementById("acerto_alert").style.display = "flex";
     document.getElementById("acerto_alert").style.animationDuration = "1.5s";
     document.getElementById("acerto_alert").style.animationName =
       "acerto_sumir";
@@ -506,13 +505,21 @@ show_respostas = (elemento) => {
 // Fim Ações
 
 function modalf() {
-  document.getElementById("modalativo").style.animationName = "bmodal";
+  document.getElementById("modalativo").style.animationName = "acerto_sumir";
+  setTimeout(() => {
+    document.getElementById("modalativo").style.display = "none";
+  }, 1000);
 }
 function modala(v) {
+  if (document.getElementById("modalativo").style.display == "none") {
+    document.getElementById("modalativo").style.display = "flex";
+  }
+
+  console.log(v);
   switch (v) {
     case 1:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>1 - Mão Direita</h1>";
@@ -524,12 +531,10 @@ function modala(v) {
       break;
     case 2:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
-        " <h1>2 - Células danificadas inflamadas/Fibras nervosas sensoriais</h1>";
-      document.getElementById("modalativo").innerHTML +=
-        " <h1>Fibras nervosas sensoriais</h1>";
+        " <h2>2 - Células danificadas inflamadas/Fibras nervosas sensoriais</h2>";
       document.getElementById("modalativo").innerHTML +=
         "<p>Neurofibras sensoriais existem em todo o corpo e vão responder às prostaglandinas.</p>";
       document.getElementById("modalativo").innerHTML +=
@@ -537,7 +542,7 @@ function modala(v) {
       break;
     case 3:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>3 - Neurônio de 1ª ordem</h1>";
@@ -548,7 +553,7 @@ function modala(v) {
       break;
     case 4:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>4 - Substância P</h1>";
@@ -559,7 +564,7 @@ function modala(v) {
       break;
     case 5:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>5 - Corno Dorsal</h1>";
@@ -570,7 +575,7 @@ function modala(v) {
       break;
     case 6:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>6 - Sinapse</h1>";
@@ -581,7 +586,7 @@ function modala(v) {
       break;
     case 7:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>7 - Neurônio de 2ª ordem</h1>";
@@ -592,7 +597,7 @@ function modala(v) {
       break;
     case 8:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>8 - Trato espinotalâmico</h1>";
@@ -603,7 +608,7 @@ function modala(v) {
       break;
     case 9:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>9 - Tronco cerebral</h1>";
@@ -616,7 +621,7 @@ function modala(v) {
       break;
     case 10:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>10 - Via Ascendente</h1>";
@@ -627,7 +632,7 @@ function modala(v) {
       break;
     case 11:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>11 - Via Descendente";
@@ -638,7 +643,7 @@ function modala(v) {
       break;
     case 12:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML += " <h1>12 - Tálamo";
       document.getElementById("modalativo").innerHTML +=
@@ -648,7 +653,7 @@ function modala(v) {
       break;
     case 13:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>13 - Neurônio de 3ª ordem</h1>";
@@ -659,7 +664,7 @@ function modala(v) {
       break;
     case 14:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>14 - Percepção da Dor</h1>";
@@ -667,9 +672,10 @@ function modala(v) {
         "<p>Sensação no lado oposto do cérebro onde o estímulo ocorreu.</p>";
       document.getElementById("modalativo").innerHTML +=
         "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
+      break;
     case 15:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>15 - Córtex Cerebral</h1>";
@@ -680,7 +686,7 @@ function modala(v) {
       break;
     case 16:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>16 - Neurotrans 5HT/NA</h1>";
@@ -691,10 +697,10 @@ function modala(v) {
       break;
     case 17:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
-        " <h1>17 - Interneurônio";
+        "<h1>17 - Interneurônio</h1>";
       document.getElementById("modalativo").innerHTML +=
         "<p> A liberação da Substância P estimula um pequeno interneurônio, que libera um opioide endógeno chamado encefalina.</p>";
       document.getElementById("modalativo").innerHTML +=
@@ -702,10 +708,10 @@ function modala(v) {
       break;
     case 18:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
-        " <h1>18 - Encefalinas</h1>";
+        "<h1>18 - Encefalinas</h1>";
       document.getElementById("modalativo").innerHTML +=
         "<p>As encefalinas são chamadas de ligantes endógenos, pois são derivadas internamente e se ligam aos receptores opióides do corpo. Elas tem importante papel ao regular a nocicepção no corpo:</p>";
       document.getElementById("modalativo").innerHTML +=
@@ -715,7 +721,7 @@ function modala(v) {
       break;
     case 19:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>3 - Neurônio de 1ª Ordem";
@@ -726,7 +732,7 @@ function modala(v) {
       break;
     case 20:
       $("#modalativo").empty();
-      document.getElementById("modalativo").style.animationName = "amodal";
+      document.getElementById("modalativo").style.animationName = "acerto";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
         " <h1>4 - Substância P ";
