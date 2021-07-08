@@ -111,6 +111,8 @@ h1 {
 }
 
 #container {
+  max-height: 82vh;
+    min-height: 82vh;
   margin-left: 6.5vh;
   max-width: 50vh;
   min-width: 50vh;
