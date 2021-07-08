@@ -39,7 +39,7 @@ h1 {
 
 #landing,
 #landing_bkg {
-  background-color: black;
+  
   display: flex;
   flex-direction: column;
   color: white;
@@ -838,7 +838,7 @@ h1 {
   }
 
   #branco {
-    width: 80%;
+    width: 88%;
   }
 }
 
