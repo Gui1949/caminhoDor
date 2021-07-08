@@ -32,7 +32,8 @@ h1 {
   width: 100%;
   height: 88%;
   position: fixed;
-
+  border-bottom-left-radius: 8vh;
+  border-bottom-right-radius: 8vh;
   background-color: #000000;
   overflow: hidden;
 }
@@ -807,22 +808,23 @@ h1 {
     min-width: 40vh;
     opacity: 1;
   }
-}
-  @media screen and (orientation: portrait) {
-    #content { 
-      overflow-x: hidden;
-    }
 
-  #landing {
+  #landing{
     background-color: black;
   }
 
-  #landing_bkg {
+  #landing_bkg{
     display: none;
   }
+
 }
 
 @media screen and (orientation: portrait) {
+
+  #content { 
+    overflow-x: hidden;
+  }
+
   #landing,
   #landing_bkg {
     background-color: none;
@@ -838,7 +840,7 @@ h1 {
   }
 
   #branco {
-    width: 80%;
+    width: 88%;
   }
 }
 

@@ -355,7 +355,6 @@ acerto = (opcao_id_img, verde, modal) => {
 
   setTimeout(() => {
     document.body.style.animationName = "bkg_escuro";
-    document.getElementById("acerto_alert").style.animationName = "acerto";
   }, 1000);
 
   console.log(opcao_id_img);
@@ -375,33 +374,33 @@ acerto = (opcao_id_img, verde, modal) => {
   }
 
   setTimeout(() => {
-    if (
-      opcao_id_img == "opcao_2" ||
-      opcao_id_img == "opcao_3" ||
-      opcao_id_img == "opcao_4" ||
-      opcao_id_img == "opcao_6" ||
-      opcao_id_img == "opcao_7" ||
-      opcao_id_img == "opcao_9" ||
-      opcao_id_img == "opcao_10" ||
-      opcao_id_img == "opcao_11" ||
-      opcao_id_img == "opcao_14" ||
-      opcao_id_img == "opcao_15" ||
-      opcao_id_img == "opcao_16" ||
-      opcao_id_img == "opcao_17" ||
-      opcao_id_img == "opcao_18"
-    ) {
-    } else {
-      if (window.matchMedia("(orientation: portrait)").matches) {
-        document.getElementById("container").style.transformOrigin =
-          Math.trunc(opcao.getBoundingClientRect().left) -
-          10 +
-          "px" +
-          " " +
-          (Math.trunc(opcao.getBoundingClientRect().top) - 30 + "px");
+    // if (
+    //   opcao_id_img == "opcao_2" ||
+    //   opcao_id_img == "opcao_3" ||
+    //   opcao_id_img == "opcao_4" ||
+    //   opcao_id_img == "opcao_6" ||
+    //   opcao_id_img == "opcao_7" ||
+    //   opcao_id_img == "opcao_9" ||
+    //   opcao_id_img == "opcao_10" ||
+    //   opcao_id_img == "opcao_11" ||
+    //   opcao_id_img == "opcao_14" ||
+    //   opcao_id_img == "opcao_15" ||
+    //   opcao_id_img == "opcao_16" ||
+    //   opcao_id_img == "opcao_17" ||
+    //   opcao_id_img == "opcao_18"
+    // ) {
+    // } else {
+    //   if (window.matchMedia("(orientation: portrait)").matches) {
+    //     document.getElementById("container").style.transformOrigin =
+    //       Math.trunc(opcao.getBoundingClientRect().left) -
+    //       10 +
+    //       "px" +
+    //       " " +
+    //       (Math.trunc(opcao.getBoundingClientRect().top) - 30 + "px");
 
-        document.getElementById("container").style.transform = "scale(3)";
-      }
-    }
+    //     document.getElementById("container").style.transform = "scale(3)";
+    //   }
+    // }
 
     document.getElementById("container").style.zIndex = 6;
     document.getElementById("acerto_alert").style.animationName = "acerto";
@@ -663,7 +662,7 @@ function modala(v) {
       document.getElementById("modalativo").style.animationName = "amodal";
       document.getElementById("modalativo").style.borderColor = "#01ea77";
       document.getElementById("modalativo").innerHTML +=
-        " <h1>14 - Percepção da Dor";
+        " <h1>14 - Percepção da Dor</h1>";
       document.getElementById("modalativo").innerHTML +=
         "<p>Sensação no lado oposto do cérebro onde o estímulo ocorreu.</p>";
       document.getElementById("modalativo").innerHTML +=
