@@ -32,6 +32,7 @@ let timer = "";
 //Telas
 
 iniciar = () => {
+  document.getElementById("container").style.transform = "scale(1.1)";
   document.getElementById("landing").style.animationName = "acerto_sumir";
   document.getElementById("landing_bkg").style.animationDuration = "1s";
   document.getElementById("landing_bkg").style.animationName = "acerto_sumir";
@@ -329,7 +330,7 @@ acerto = (opcao_id_img, verde,modal) => {
     }, 500);
 
     setTimeout(() => {
-      document.getElementById("container").style.transform = "scale(1)";
+      document.getElementById("container").style.transform = "scale(1.1)";
       document.getElementById("acerto_alert").style.animationName =
         "acerto_sumir";
       document.getElementById("overlay").style.animationName = "acerto_sumir";
