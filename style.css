@@ -563,11 +563,12 @@ h1 {
   opacity: 0;
   align-self: flex-end;
   position: absolute;
-  top: 85%;
+  top: 80%;
+
   height: 4vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 15;
+  z-index: 0;
 }
 
 #fim_popup,
@@ -678,6 +679,20 @@ h1 {
 #botao_iniciar {
   cursor: pointer;
   height: 3vh;
+}
+#black {
+  z-index: -1;
+  display: flex;
+    background-color: black;
+    border-color: #01ea77;
+    position: absolute;
+    height: 157%;
+    width: 62vh;
+    margin-top: 1vh;
+    left: -57px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 #branco {
   background-color: white;
@@ -1089,6 +1104,18 @@ h1 {
     opacity: 1;
   }
 }
+  @keyframes vcacerto {
+    from {
+      z-index: 0;
+      opacity: 0;
+    }
+  
+    to {
+      z-index: 15;
+      opacity: 1;
+    }
+  }
+
 @keyframes bmodal {
   from {
     z-index: 2;

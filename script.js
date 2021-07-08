@@ -261,6 +261,7 @@ verificador = (valor, correto, id_texto, id_select) => {
 };
 
 acerto = (opcao_id_img, verde,modal) => {
+  document.getElementById("acerto_alert").style.animationName = "vcacerto";
   document.getElementById("acerto_alert").style.borderColor = "#01ea77";
   document.getElementById("acerto_alert").innerHTML =
     "<span class='material-icons acerto'> check_circle </span>";
@@ -270,6 +271,7 @@ acerto = (opcao_id_img, verde,modal) => {
   let opcao = document.getElementById(opcao_id_img);
   document.getElementById('content').scrollLeft += -100000;
   opcao.style.animationName = "aparecer";
+  
 
   setTimeout(() => {
     document.body.style.animationName = "bkg_escuro";
@@ -322,8 +324,7 @@ acerto = (opcao_id_img, verde,modal) => {
     }
 
     document.getElementById("container").style.zIndex = 6;
-    document.getElementById("acerto_alert").style.animationName = "acerto";
-    opcao.style.zIndex = 5;
+    
 
     setTimeout(() => {
       correto.play();
@@ -367,10 +368,11 @@ erro = (texto) => {
     document.getElementById("acerto_alert").innerHTML += "<p>" + texto + "</p>";
   }
 
-  document.getElementById("acerto_alert").style.animationDuration = "1.5s";
-  document.getElementById("acerto_alert").style.animationName = "acerto";
+
+
 
   setTimeout(() => {
+    document.getElementById("acerto_alert").style.animationDuration = "1.5s";
     document.getElementById("acerto_alert").style.animationName =
       "acerto_sumir";
   }, 3000);
