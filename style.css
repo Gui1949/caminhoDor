@@ -803,7 +803,8 @@ h1 {
 @media screen and (orientation: landscape) {
   #quiz {
     display: flex;
-    width: 70vh;
+    max-width: 40vh;
+    min-width: 40vh;
     opacity: 1;
   }
 }
