@@ -32,8 +32,7 @@ h1 {
   width: 100%;
   height: 88%;
   position: fixed;
-  border-bottom-left-radius: 8vh;
-  border-bottom-right-radius: 8vh;
+
   background-color: #000000;
   overflow-y: hidden;
 }
@@ -89,13 +88,15 @@ h1 {
 
 #content {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  max-width: 60vh;
+  min-width: 60vh;
+  
   object-fit: contain;
   height: 100%;
   margin: auto;
   padding: 0;
-  overflow: hidden;
+  overflow: scroll;
+  overflow-y: hidden;
 }
 
 #navbar {
@@ -110,6 +111,9 @@ h1 {
 }
 
 #container {
+  margin-left: 6.5vh;
+  max-width: 50vh;
+  min-width: 50vh;
   flex-wrap: wrap;
   padding-top: 5vh;
   animation-duration: 1s;
@@ -128,8 +132,10 @@ h1 {
   overflow: hidden;
 }
 
+
 #quiz,
 #textos {
+
   display: none;
   color: white;
   opacity: 0;
@@ -172,7 +178,7 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 7vh;
+  height: 12vh;
   align-items: center;
 }
 
@@ -227,7 +233,7 @@ h1 {
   top: 44.2%;
   width: 15vh;
   height: 4vh;
-  left: 9%;
+  left: 6%;
 }
 #opcao_1 {
   top: 43.8%;
@@ -344,10 +350,17 @@ h1 {
   left: 44%;
   width: 13vh;
 }
+#opcao_6_1 {
+  top: -31%;
+    border-bottom-right-radius: 10%;
+    height: 1.5vh;
+    left: 44%;
+    width: 6vh;
+}
 #opcao_7_1a,
 #opcao_7_1 {
   top: 45.3%;
-  height: 3.5vh;
+  height: 4.5vh;
   border-bottom-left-radius: 50%;
   left: 60%;
   width: 5.8vh;
@@ -407,16 +420,16 @@ h1 {
 #opcao_10a,
 #opcao_10 {
   top: 27%;
-  height: 3vh;
+  height: 4.5vh;
   left: 60%;
   width: 13vh;
 }
 #opcao_11_1a,
 #opcao_11_1 {
   top: 25.8%;
-  left: 30%;
+  left: 30.5%;
   width: 10.3vh;
-  height: 3.2vh;
+  height: 3.7vh;
   border-top-right-radius: 20%;
   border-bottom-right-radius: 20%;
 }
@@ -436,6 +449,12 @@ h1 {
   left: 61%;
   width: 6.8vh;
 }
+#opcao_12_1 {
+  top: -17.8%;
+    height: 1.4vh;
+    left: 22%;
+    width: 1.8vh;
+}
 #opcao_13a,
 #opcao_13 {
   top: 21.4%;
@@ -445,10 +464,10 @@ h1 {
 }
 #opcao_14_1a,
 #opcao_14_1 {
-  top: 17%;
-  height: 3.5vh;
+  top: 16.6%;
+  height: 4.2vh;
   left: 70%;
-  width: 9vh;
+  width: 9vh
 }
 #opcao_14_2a,
 #opcao_14_2 {
@@ -481,15 +500,17 @@ h1 {
 #opcao_15_3a,
 #opcao_15_3 {
   top: 20.4%;
-  left: 12%;
-  width: 7vh;
+  left: 12.5%;
+  width: 6.5vh;
   height: 3vh;
+  border-top-right-radius: 54%;
+  border-bottom-right-radius: 5%;
 }
 #opcao_15_4a,
 #opcao_15_4 {
   top: 13%;
-  left: 3%;
-  width: 9vh;
+  left: 2vh;
+  width: 8vh;
   height: 3vh;
   border-bottom-right-radius: 40%;
   border-top-right-radius: 40%;
@@ -519,16 +540,16 @@ h1 {
 #opcao_18_1a,
 #opcao_18_1 {
   top: 77%;
-  width: 5vh;
-  height: 1vh;
-  left: 61.5%;
+    width: 5vh;
+    height: 1vh;
+    left: 62.5%;
 }
 #opcao_18_2a,
 #opcao_18_2 {
   top: 77.7%;
-  width: 3vh;
-  height: 1vh;
-  left: 61.5%;
+  width: 3.16vh;
+  height: 1.1vh;
+  left: 62%;
 }
 #opcao_18_3a,
 #opcao_18_3 {
@@ -542,11 +563,12 @@ h1 {
   opacity: 0;
   align-self: flex-end;
   position: absolute;
-  top: 85%;
+  top: 80%;
+
   height: 4vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 15;
+  z-index: 0;
 }
 
 #fim_popup,
@@ -570,12 +592,12 @@ h1 {
 }
 
 #intro {
-  height: 30vh;
+  height: 38vh;
   overflow-y: scroll;
 }
 
 #inicio_popup {
-  height: 60%;
+  height: 63%;
 }
 
 #fim_popup,
@@ -590,7 +612,7 @@ h1 {
 }
 
 #relogio {
-  position: absolute;
+  position: fixed;
   opacity: 0;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -602,7 +624,7 @@ h1 {
   height: 12vh;
   border: 0.4vh solid #01ea77;
   border-radius: 100%;
-  top: 80%;
+  top: 70%;
   left: 8.5%;
   z-index: 10;
 }
@@ -658,13 +680,14 @@ h1 {
   cursor: pointer;
   height: 3vh;
 }
+
 #branco {
   background-color: white;
-  display: none;
+  
   border-color: #01ea77;
   position: absolute;
   height: 80%;
-  width: 90%;
+  width: 88%;
   margin-top: 1vh;
   left: 0;
   right: 0;
@@ -1068,6 +1091,18 @@ h1 {
     opacity: 1;
   }
 }
+  @keyframes vcacerto {
+    from {
+      z-index: 0;
+      opacity: 0;
+    }
+  
+    to {
+      z-index: 15;
+      opacity: 1;
+    }
+  }
+
 @keyframes bmodal {
   from {
     z-index: 2;
@@ -1078,4 +1113,32 @@ h1 {
     z-index: 0;
     opacity: 0;
   }
+}
+/* width */
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+ 
+ #quiz{
+  max-width: 50vh;
+  min-width: 50vh;
+  
 }
