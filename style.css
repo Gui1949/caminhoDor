@@ -100,14 +100,11 @@ h1 {
 
 #content {
   display: flex;
-  max-width: 50vh;
-  min-width: 50vh;
-  
+  width: 100vh;
   object-fit: contain;
   height: 100%;
   margin: auto;
   padding: 0;
-  overflow: scroll;
   overflow-y: hidden;
 }
 
@@ -850,7 +847,7 @@ h1 {
   }
 
   #branco {
-    width: 88%;
+    width: 89%;
   }
 }
 
@@ -1099,6 +1096,7 @@ h1 {
     z-index: 2;
   }
 }
+
 /* width */
 
 ::-webkit-scrollbar {
