@@ -824,6 +824,10 @@ h1 {
     display: none;
   }
 
+  #branco{
+    width: 89%;
+  }
+
 }
 
 @media screen and (orientation: portrait) {
