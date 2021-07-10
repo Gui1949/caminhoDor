@@ -98,10 +98,10 @@ function swipedetect(el, callback) {
 inicio_popup = () => {
   document.getElementById("landing").style.animationName = "acerto_sumir"
   document.getElementById("inicio_popup").style.animationName = "acerto";
-  document.getElementById("inicio_popup").style.zIndex = "99";
+  document.getElementById("inicio_popup").style.zIndex = "9999999999";
 
   setTimeout(() => {
-    document.getElementById("inicio_popup").style.animationName = "flex";
+    document.getElementById("inicio_popup").style.display = "flex";
     document.getElementById("inicio_popup").style.opacity = "1";
   }, 1000);
 };
@@ -129,30 +129,32 @@ pos_pop_ini = () => {
 
   setTimeout(() => {
     //Relógio Start
-    let contador_tempo = () => {
-      tempo = tempo - 1;
-
-      if (tempo < 120) {
-        document.getElementById("relogio").style.borderColor = "#fe0000";
-      }
-
-      if (tempo == 0) {
-        fim_popup(1);
-      }
-
-      let minutos = Math.floor(tempo / 60);
-      let segundos = tempo - minutos * 60;
-
-      function str_pad_left(string, pad, length) {
-        return (new Array(length + 1).join(pad) + string).slice(-length);
-      }
-
-      let tempo_final =
-        str_pad_left(minutos, "0", 2) + ":" + str_pad_left(segundos, "0", 2);
-      document.getElementById("txt_relogio").innerHTML = tempo_final;
-    };
-
-    timer = setInterval(contador_tempo, 1000);
+    if(tempo == 600){
+      let contador_tempo = () => {
+        tempo = tempo - 1;
+  
+        if (tempo < 120) {
+          document.getElementById("relogio").style.borderColor = "#fe0000";
+        }
+  
+        if (tempo == 0) {
+          fim_popup(1);
+        }
+  
+        let minutos = Math.floor(tempo / 60);
+        let segundos = tempo - minutos * 60;
+  
+        function str_pad_left(string, pad, length) {
+          return (new Array(length + 1).join(pad) + string).slice(-length);
+        }
+  
+        let tempo_final =
+          str_pad_left(minutos, "0", 2) + ":" + str_pad_left(segundos, "0", 2);
+        document.getElementById("txt_relogio").innerHTML = tempo_final;
+      };
+  
+      timer = setInterval(contador_tempo, 1000);
+    }
 
     setTimeout(() => {
       document.getElementById("relogio").style.animationName = "acerto";
