@@ -95,20 +95,24 @@ function swipedetect(el, callback) {
 
 //Telas
 
-iniciar = () => {
+inicio_popup = () => {
+  document.getElementById("landing").style.animationName = "acerto_sumir"
+  document.getElementById("inicio_popup").style.animationName = "acerto";
+  document.getElementById("inicio_popup").style.zIndex = "99";
+
+  setTimeout(() => {
+    document.getElementById("inicio_popup").style.animationName = "flex";
+    document.getElementById("inicio_popup").style.opacity = "1";
+  }, 1000);
+};
+
+pos_pop_ini = () => {
+
   document.getElementById("container").style.transform = "scale(1.1)";
   document.getElementById("landing").style.animationName = "acerto_sumir";
   document.getElementById("landing_bkg").style.animationDuration = "1s";
   document.getElementById("landing_bkg").style.animationName = "acerto_sumir";
   document.getElementById("inicio_popup").style.animationName = "acerto";
-
-  let el = document.getElementById("container");
-  // swipedetect(el, function (swipedir) {
-  //   // swipedir contains either "none", "left", "right", "top", or "down"
-  //   if (swipedir == "left") {
-  //     tela_quiz();
-  //   }
-  // });
 
   setTimeout(() => {
     document.getElementById("landing").style.display = "none";
@@ -120,9 +124,7 @@ iniciar = () => {
     document.getElementById("btn_quiz").style.display = "none";
     tela_quiz();
   }
-};
 
-pos_pop_ini = () => {
   document.getElementById("inicio_popup").style.animationName = "acerto_sumir";
 
   setTimeout(() => {
@@ -504,13 +506,13 @@ show_respostas = (elemento) => {
 
 // Fim Ações
 
-function modalf() {
+modalf = () => {
   document.getElementById("modalativo").style.animationName = "acerto_sumir";
   setTimeout(() => {
     document.getElementById("modalativo").style.display = "none";
   }, 1000);
 }
-function modala(v) {
+modala = (v) => {
   if (document.getElementById("modalativo").style.display == "none") {
     document.getElementById("modalativo").style.display = "flex";
   }

@@ -60,12 +60,16 @@ h1 {
   opacity: 1;
   width: 100%;
   height: 100%;
-  z-index: 12;
+}
+
+#landing_bkg{
+  z-index: 15;
 }
 
 #landing {
   padding-left: 2vh;
   margin-right: 2vh;
+  z-index: 16;
 }
 
 #titulo_landing {
@@ -599,7 +603,6 @@ h1 {
 }
 
 #intro {
-  height: 38vh;
   overflow-y: scroll;
 }
 
@@ -816,7 +819,7 @@ h1 {
   }
 
   #landing_bkg{
-    display: none;
+    filter: brightness(0)
   }
 
   #branco{
@@ -986,7 +989,7 @@ h1 {
   top: 13.2%;
   width: 3vh;
   height: 3.5%;
-  left: 84%;
+  left: 87%;
 }
 #modal_15 {
   top: 17.2%;

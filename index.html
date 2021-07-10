@@ -34,51 +34,50 @@
         sit amet ex augue. Etiam vitae sagittis arcu, vestibulum venenatis
         purus. Aliquam varius consequat placerat. Morbi in turpis nunc.
       </p>
-      <div id="botao_iniciar" onclick="iniciar()"><p>Iniciar</p></div>
+      <div id="botao_iniciar" onclick="inicio_popup()"><p>Iniciar</p></div>
+    </div>
+    <div id="inicio_popup">
+      <h1>Como Jogar?</h1>
+      <p id="intro">
+        Cada número na imagem representa uma etapa no Caminho da Dor.
+        <br />
+        <br />
+        As etapas foram listadas aleatoriamente na tela
+        <span class="material-icons texto"> quiz </span>. O desafio consiste
+        em relacionar corretamente todas as etapas com seus respectivos
+        números na tela <span class="material-icons texto"> home </span>.
+        Pode se começar por qualquer número/etapa.
+        <br />
+        <br />
+        O limite de tempo é de 10 minutos.
+        <br />
+        <br />
+        Após cada acerto, é possível se obter uma explicação clicando duas
+        vezes no respectivo número.
+        <br />
+        <br />
+        Completado o desafio ou exaurido o tempo, é possível acessar uma
+        relação de todas as etapas e suas explicações na tela
+        <span class="material-icons texto">question_answer</span>.
+        <br />
+        <br />
+        O desafio pode ser repetido quantas vezes quiser, sempre começando
+        do zero, clicando na tela
+        <span class="material-icons texto">replay</span>.
+      </p>
+      <div
+        id="botao_iniciar"
+        style="border-color: #006eff"
+        onclick="pos_pop_ini()"
+      >
+        <p>Ok</p>
+      </div>
     </div>
     <div id="master">
       <div id="relogio_upper"></div>
       <div id="overlay"></div>
       <div id="content">
         <div id="modalativo"></div>
-
-        <div id="inicio_popup">
-          <h1>Como Jogar?</h1>
-          <p id="intro">
-            Cada número na imagem representa uma etapa no Caminho da Dor.
-            <br />
-            <br />
-            As etapas foram listadas aleatoriamente na tela
-            <span class="material-icons texto"> quiz </span>. O desafio consiste
-            em relacionar corretamente todas as etapas com seus respectivos
-            números na tela <span class="material-icons texto"> home </span>.
-            Pode se começar por qualquer número/etapa.
-            <br />
-            <br />
-            O limite de tempo é de 10 minutos.
-            <br />
-            <br />
-            Após cada acerto, é possível se obter uma explicação clicando duas
-            vezes no respectivo número.
-            <br />
-            <br />
-            Completado o desafio ou exaurido o tempo, é possível acessar uma
-            relação de todas as etapas e suas explicações na tela
-            <span class="material-icons texto">question_answer</span>.
-            <br />
-            <br />
-            O desafio pode ser repetido quantas vezes quiser, sempre começando
-            do zero, clicando na tela
-            <span class="material-icons texto">replay</span>.
-          </p>
-          <div
-            id="botao_iniciar"
-            style="border-color: #006eff"
-            onclick="pos_pop_ini()"
-          >
-            <p>Ok</p>
-          </div>
-        </div>
 
         <div id="fim_popup"></div>
 
