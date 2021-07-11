@@ -29,76 +29,47 @@ let textos_obj = {
 // Timer
 let timer = "";
 
-// Swipe
-function swipedetect(el, callback) {
-  var touchsurface = el,
-    swipedir,
-    startX,
-    startY,
-    distX,
-    distY,
-    threshold = 150, //required min distance traveled to be considered swipe
-    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-    allowedTime = 300, // maximum time allowed to travel that distance
-    elapsedTime,
-    startTime,
-    handleswipe = callback || function (swipedir) {};
-
-  touchsurface.addEventListener(
-    "touchstart",
-    function (e) {
-      var touchobj = e.changedTouches[0];
-      swipedir = "none";
-      dist = 0;
-      startX = touchobj.pageX;
-      startY = touchobj.pageY;
-      startTime = new Date().getTime(); // record time when finger first makes contact with surface
-      e.preventDefault();
-    },
-    false
-  );
-
-  touchsurface.addEventListener(
-    "touchmove",
-    function (e) {
-      e.preventDefault(); // prevent scrolling when inside DIV
-    },
-    true
-  );
-
-  touchsurface.addEventListener(
-    "touchend",
-    function (e) {
-      var touchobj = e.changedTouches[0];
-      distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
-      distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
-      elapsedTime = new Date().getTime() - startTime; // get time elapsed
-      if (elapsedTime <= allowedTime) {
-        // first condition for awipe met
-        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
-          // 2nd condition for horizontal swipe met
-          swipedir = distX < 0 ? "left" : "right"; // if dist traveled is negative, it indicates left swipe
-        } else if (
-          Math.abs(distY) >= threshold &&
-          Math.abs(distX) <= restraint
-        ) {
-          // 2nd condition for vertical swipe met
-          swipedir = distY < 0 ? "up" : "down"; // if dist traveled is negative, it indicates up swipe
-        }
-      }
-      handleswipe(swipedir);
-      e.preventDefault();
-    },
-    false
-  );
-}
-
 //Telas
 
+inicio_img1 = () => {
+  document.getElementById("landing").style.animationName = "acerto_sumir";
+  document.getElementById("img_1").style.animationName = "acerto";
+  document.getElementById("botao_continuar").style.animationName = "acerto";
+  document.getElementById("img_1").src = "caminho_num.jpg";
+  document.getElementById("img_1").style.zIndex = "198";
+  document.getElementById("landing_bkg").src = "";
+  document.getElementById("landing_bkg").style.backgroundColor = "black";
+
+  setTimeout(() => {
+    document.getElementById("botao_continuar").style.display = "flex";
+    document
+      .getElementById("botao_continuar")
+      .setAttribute("onclick", "img_trocar()");
+    document.getElementById("img_1").style.display = "flex";
+    document.getElementById("img_1").style.opacity = "1";
+  }, 1000);
+};
+
+img_trocar = () => {
+  document.getElementById("img_1").src = "caminho_textos.jpg";
+  document
+    .getElementById("botao_continuar")
+    .setAttribute("onclick", "inicio_popup()");
+};
+
 inicio_popup = () => {
-  document.getElementById("landing").style.animationName = "acerto_sumir"
+  try {
+    document.getElementById("landing_bkg").src = "caminho.jpg";
+
+    document.getElementById("img1_container").style.animationName =
+      "acerto_sumir";
+    setTimeout(() => {
+      document.getElementById("img1_container").remove()
+    },1000)
+    document.getElementById("landing").style.animationName = "acerto_sumir";
+  } catch {}
   document.getElementById("inicio_popup").style.animationName = "acerto";
-  document.getElementById("inicio_popup").style.zIndex = "9999999999";
+  document.getElementById("inicio_popup").style.zIndex = "16";
 
   setTimeout(() => {
     document.getElementById("inicio_popup").style.display = "flex";
@@ -107,16 +78,21 @@ inicio_popup = () => {
 };
 
 pos_pop_ini = () => {
-
   document.getElementById("container").style.transform = "scale(1.1)";
-  document.getElementById("landing").style.animationName = "acerto_sumir";
-  document.getElementById("landing_bkg").style.animationDuration = "1s";
-  document.getElementById("landing_bkg").style.animationName = "acerto_sumir";
+
+  try {
+    document.getElementById("landing").style.animationName = "acerto_sumir";
+    document.getElementById("landing_bkg").style.animationDuration = "1s";
+    document.getElementById("landing_bkg").style.animationName = "acerto_sumir";
+  } catch {}
+
   document.getElementById("inicio_popup").style.animationName = "acerto";
 
   setTimeout(() => {
-    document.getElementById("landing").style.display = "none";
-    document.getElementById("landing_bkg").style.display = "none";
+    try {
+      document.getElementById("landing").remove();
+      document.getElementById("landing_bkg").remove();
+    } catch {}
     document.getElementById("branco").style.display = "flex";
   }, 1000);
 
@@ -129,30 +105,30 @@ pos_pop_ini = () => {
 
   setTimeout(() => {
     //Relógio Start
-    if(tempo == 600){
+    if (tempo == 600) {
       let contador_tempo = () => {
         tempo = tempo - 1;
-  
+
         if (tempo < 120) {
           document.getElementById("relogio").style.borderColor = "#fe0000";
         }
-  
+
         if (tempo == 0) {
           fim_popup(1);
         }
-  
+
         let minutos = Math.floor(tempo / 60);
         let segundos = tempo - minutos * 60;
-  
+
         function str_pad_left(string, pad, length) {
           return (new Array(length + 1).join(pad) + string).slice(-length);
         }
-  
+
         let tempo_final =
           str_pad_left(minutos, "0", 2) + ":" + str_pad_left(segundos, "0", 2);
         document.getElementById("txt_relogio").innerHTML = tempo_final;
       };
-  
+
       timer = setInterval(contador_tempo, 1000);
     }
 
@@ -513,7 +489,7 @@ modalf = () => {
   setTimeout(() => {
     document.getElementById("modalativo").style.display = "none";
   }, 1000);
-}
+};
 modala = (v) => {
   if (document.getElementById("modalativo").style.display == "none") {
     document.getElementById("modalativo").style.display = "flex";
@@ -748,4 +724,4 @@ modala = (v) => {
     default:
       text = "Looking forward to the Weekend";
   }
-}
+};
