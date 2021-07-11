@@ -172,7 +172,7 @@ h1 {
   padding-right: 5vh;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  width: 100vh;
+  width: 88vw;
   overflow-y: auto;
   justify-items: space-between;
   background-color: black;
@@ -678,6 +678,7 @@ h1 {
 
 #botao_iniciar,
 #botao_continuar,
+#botao_desistir,
 #acerto_alert,
 #botao_textos {
   display: flex;
@@ -692,24 +693,35 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-#botao_iniciar, #botao_continuar{
+#botao_iniciar,
+#botao_continuar {
   border-color: #01ea77;
   justify-content: center;
   width: 19vh;
 }
 
-#botao_iniciar > p, #botao_continuar > p{
+#botao_desistir {
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  width: 35.48vh;
+  justify-content: center;
+}
+
+#botao_iniciar > p,
+#botao_desistir > p,
+#botao_continuar > p {
   font-size: 3vh;
 }
 
 #botao_textos,
 #botao_continuar,
+#botao_desistir,
 #botao_iniciar {
   cursor: pointer;
   height: 3vh;
 }
 
-#botao_continuar{
+#botao_continuar {
   margin-top: 1vh;
   display: none;
   z-index: 100;
@@ -1125,8 +1137,8 @@ h1 {
 /* width */
 
 ::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
+  height: 0.1vh;
+  width: 0.4vh;
 }
 
 /* Track */

@@ -64,8 +64,8 @@ inicio_popup = () => {
     document.getElementById("img1_container").style.animationName =
       "acerto_sumir";
     setTimeout(() => {
-      document.getElementById("img1_container").remove()
-    },1000)
+      document.getElementById("img1_container").remove();
+    }, 1000);
     document.getElementById("landing").style.animationName = "acerto_sumir";
   } catch {}
   document.getElementById("inicio_popup").style.animationName = "acerto";
@@ -147,16 +147,19 @@ tela_quiz = () => {
     document.getElementById("container").style.animationName = "acerto_sumir";
   }
 
-  document.getElementById("relogio").style.animationName = "acerto_sumir";
+  try {
+    document.getElementById("relogio").style.animationName = "acerto_sumir";
+  } catch {}
 
   setTimeout(() => {
     document.getElementById("textos").style.display = "none";
 
     if (!window.matchMedia("(orientation: landscape)").matches) {
       document.getElementById("container").style.display = "none";
-      document.getElementById("relogio").style.display = "none";
-      document.getElementById("relogio").innerHTML = "";
-
+      try {
+        document.getElementById("relogio").style.display = "none";
+        document.getElementById("relogio").innerHTML = "";
+      } catch {}
       document.getElementById("relogio_upper").style.animationName = "acerto";
       document.getElementById("relogio_upper").innerHTML =
         "<p id='txt_relogio'></p>";
@@ -217,19 +220,35 @@ tela_quiz = () => {
       for (let j = ul.children.length; j >= 0; j--) {
         ul.appendChild(ul.children[(Math.random() * j) | 0]);
       }
+
+      let btn_desistir = document.createElement("div");
+      btn_desistir.onclick = () => {
+        tempo = 0;
+        btn_desistir.remove();
+        tela_textos();
+      };
+      btn_desistir.innerHTML = "<p>Finalizar agora</p>";
+      btn_desistir.id = "botao_desistir";
+      btn_desistir.style.display = "flex";
+      btn_desistir.style.borderColor = "#fe0000";
+      document.getElementById("quiz").appendChild(btn_desistir);
     }
   }, 1000);
 };
 
 tela_home = () => {
-  if (!window.matchMedia("(orientation: landscape)").matches) {
+  if (window.matchMedia("(orientation: portrait)").matches) {
     document.getElementById("quiz").style.animationName = "acerto_sumir";
+  } else {
+    document.getElementById("quiz").style.display = "flex";
+    document.getElementById("quiz").style.animationName = "acerto";
   }
 
   document.getElementById("textos").style.animationName = "acerto_sumir";
-  document.getElementById("relogio").style.animationName = "acerto";
-
-  document.getElementById("relogio").innerHTML = "<p id='txt_relogio'></p>";
+  try {
+    document.getElementById("relogio").style.animationName = "acerto";
+    document.getElementById("relogio").innerHTML = "<p id='txt_relogio'></p>";
+  } catch {}
   document.getElementById("relogio_upper").style.animationName = "acerto_sumir";
   setTimeout(() => {
     document.getElementById("btn_home").className =
@@ -246,7 +265,9 @@ tela_home = () => {
 
     document.getElementById("container").style.animationName = "acerto";
     document.getElementById("container").style.display = "flex";
-    document.getElementById("relogio").style.display = "flex";
+    try {
+      document.getElementById("relogio").style.display = "flex";
+    } catch {}
   }, 1000);
 };
 
@@ -256,14 +277,6 @@ tela_textos = () => {
       document.getElementById("navbar").innerHTML +=
         "<span class='material-icons icons' id='replay' onclick='window.location.reload()'>replay</span>";
     }
-
-    let el = document.getElementById("textos");
-    // swipedetect(el, function (swipedir) {
-    //   // swipedir contains either "none", "left", "right", "top", or "down"
-    //   if (swipedir == "right") {
-    //     tela_quiz();
-    //   }
-    // });
 
     clearInterval(timer);
     console.log(tempo);
@@ -278,7 +291,11 @@ tela_textos = () => {
     document.getElementById("relogio_upper").style.animationName =
       "acerto_sumir";
 
-    document.getElementById("relogio").style.animationName = "acerto_sumir";
+    try {
+      document.getElementById("btn_ajuda").remove();
+      document.getElementById("relogio").remove();
+    } catch {}
+
     document.getElementById("container").style.animationName = "acerto_sumir";
 
     setTimeout(() => {
