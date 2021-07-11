@@ -856,7 +856,8 @@ h1 {
   }
 
   #landing_bkg {
-    filter: brightness(0);
+    image-resolution: 1dpi;
+    filter: brightness(0%)
   }
 
   #branco {
