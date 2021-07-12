@@ -725,7 +725,7 @@ h1 {
 }
 
 #botao_continuar {
-  margin-top: 5vh;
+  margin-top: 3vh;
   display: none;
   z-index: 100;
 }
@@ -890,6 +890,10 @@ h1 {
   #landing,
   #landing_bkg {
     background-color: none;
+  }
+
+  #titulo_landing{
+    margin-top: 8vh;
   }
 
   #landing_bkg {
