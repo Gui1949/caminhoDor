@@ -64,6 +64,15 @@ h1 {
 #landing_bkg {
   z-index: 15;
   /* height: 500%; */
+  left: 0%;
+  /* width: 50vh; */
+  height: 100vh;
+  top: 0;
+  object-fit: cover;
+  /* transform: scale(1); */
+  /* animation: go-back 40s infinite alternate; */
+  /* animation-name: wallpaper; */
+  filter: blur(0.8vh) brightness(55%);
 }
 
 #landing {
@@ -854,7 +863,6 @@ h1 {
   }
 
   #landing {
-    /* background-color: black; */
     margin-left: 10vh;
   }
 
@@ -892,18 +900,6 @@ h1 {
 
   #titulo_landing {
     margin-top: 8vh;
-  }
-
-  #landing_bkg {
-    left: 0%;
-    /* width: 50vh; */
-    height: 100vh;
-    top: 0;
-    object-fit: cover;
-    /* transform: scale(1); */
-    /* animation: go-back 40s infinite alternate; */
-    /* animation-name: wallpaper; */
-    filter: blur(0.8vh) brightness(55%);
   }
 
   #descricao_landing {
@@ -1201,7 +1197,7 @@ h1 {
 
 ::-webkit-scrollbar {
   height: 2vh;
-  width: 1.2vh;
+  width: 2vh;
 }
 
 /* Track */
