@@ -47,7 +47,7 @@ inicio_img1 = () => {
       .setAttribute("onclick", "img_trocar()");
     document.getElementById("img_1").style.display = "flex";
     document.getElementById("img_1").style.opacity = "1";
-    document.getElementById("landing").style.display = "none"
+    document.getElementById("landing").style.display = "none";
   }, 1000);
 };
 
@@ -238,13 +238,6 @@ tela_quiz = () => {
 };
 
 tela_home = () => {
-  if (window.matchMedia("(orientation: portrait)").matches) {
-    document.getElementById("quiz").style.animationName = "acerto_sumir";
-  } else {
-    document.getElementById("quiz").style.display = "flex";
-    document.getElementById("quiz").style.animationName = "acerto";
-  }
-
   document.getElementById("textos").style.animationName = "acerto_sumir";
   try {
     document.getElementById("relogio").style.animationName = "acerto";
@@ -266,6 +259,14 @@ tela_home = () => {
 
     document.getElementById("container").style.animationName = "acerto";
     document.getElementById("container").style.display = "flex";
+
+    if (window.matchMedia("(orientation: portrait)").matches) {
+      document.getElementById("quiz").style.animationName = "acerto_sumir";
+    } else {
+      document.getElementById("quiz").style.display = "flex";
+      document.getElementById("quiz").style.animationName = "acerto";
+    }
+
     try {
       document.getElementById("relogio").style.display = "flex";
     } catch {}
@@ -282,6 +283,19 @@ tela_textos = () => {
     clearInterval(timer);
     console.log(tempo);
     tempo = undefined;
+
+    //Remover Overlays
+    document.getElementById("caminho").src = "caminho.jpg"
+    document.getElementById("caminho").style.zIndex = 999
+
+    //Responder todas
+    let qtd = 1
+
+    while(qtd < 19){
+      document.getElementById('select_' + qtd).selectedIndex = qtd
+      document.getElementById('select_' + qtd).disabled = true
+      qtd++
+    }
 
     document.getElementById("overlay").style.animationName = "acerto_sumir";
     document.getElementById("overlay").style.animationFillMode = "forwards";
@@ -360,11 +374,8 @@ acerto = (opcao_id_img, verde, modal) => {
     aopcao.style.animationName = "mudar";
   }, 10000);
 
-  //modal----------------------------------------------------------------
   let omodal = document.getElementById(modal);
   omodal.style.animationName = "fmodal";
-
-  //modal---------------------------------------------------------------------------------------------
 
   if (!window.matchMedia("(orientation: landscape)").matches) {
     tela_home();

@@ -185,6 +185,7 @@ h1 {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   width: 88vw;
+  overflow-x: hidden;
   overflow-y: auto;
   justify-items: space-between;
   background-color: black;
@@ -688,6 +689,7 @@ h1 {
   z-index: 12;
 }
 
+
 #botao_iniciar,
 #botao_continuar,
 #botao_desistir,
@@ -910,6 +912,22 @@ h1 {
   #branco {
     width: 89%;
   }
+
+  #quiz, #textos{
+    padding-top: 0;
+  }
+
+  #quiz{
+    height: 60vh;
+    margin-top: 14vh;
+  }
+
+  #textos{
+    height: 70vh;
+    width: 76vw;
+    margin-top: 7vh;
+  }
+
 }
 
 /* @media screen and (min-width: 950px) and (orientation: portrait) {
