@@ -47,6 +47,7 @@ inicio_img1 = () => {
       .setAttribute("onclick", "img_trocar()");
     document.getElementById("img_1").style.display = "flex";
     document.getElementById("img_1").style.opacity = "1";
+    document.getElementById("landing").style.display = "none";
   }, 1000);
 };
 
@@ -176,6 +177,11 @@ tela_quiz = () => {
     quiz.style.animationName = "acerto";
 
     if (document.getElementById("quiz").innerHTML == "") {
+      let header_desk = document.createElement("div");
+      header_desk.innerHTML =
+        '<p>Etapas&nbsp</p><span class="material-icons icons" id="btn_quiz">quiz</span>';
+      header_desk.id = "header_desk";
+      quiz.appendChild(header_desk);
       let i = 0;
       while (i < 18) {
         let div_opcao = document.createElement("li");
@@ -237,13 +243,6 @@ tela_quiz = () => {
 };
 
 tela_home = () => {
-  if (window.matchMedia("(orientation: portrait)").matches) {
-    document.getElementById("quiz").style.animationName = "acerto_sumir";
-  } else {
-    document.getElementById("quiz").style.display = "flex";
-    document.getElementById("quiz").style.animationName = "acerto";
-  }
-
   document.getElementById("textos").style.animationName = "acerto_sumir";
   try {
     document.getElementById("relogio").style.animationName = "acerto";
@@ -265,6 +264,14 @@ tela_home = () => {
 
     document.getElementById("container").style.animationName = "acerto";
     document.getElementById("container").style.display = "flex";
+
+    if (window.matchMedia("(orientation: portrait)").matches) {
+      document.getElementById("quiz").style.animationName = "acerto_sumir";
+    } else {
+      document.getElementById("quiz").style.display = "flex";
+      document.getElementById("quiz").style.animationName = "acerto";
+    }
+
     try {
       document.getElementById("relogio").style.display = "flex";
     } catch {}
@@ -281,6 +288,36 @@ tela_textos = () => {
     clearInterval(timer);
     console.log(tempo);
     tempo = undefined;
+
+    //Remover Overlays
+    document.getElementById("caminho").src = "caminho.jpg";
+    // document.getElementById("caminho").style.zIndex = 3
+
+    //Responder todas
+    let qtd = 1;
+    let array_geral = [
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+    ];
+    console.log(array_geral[qtd]);
+
+    while (qtd < 19) {
+      document.getElementById("select_" + qtd).selectedIndex = qtd;
+
+      let omodal = document.getElementById("modal_" + qtd);
+      omodal.style.animationName = "fmodal";
+
+      let modal_vlr = array_geral[qtd]
+      document.getElementById("opcao_" + qtd).style.opacity = 0;
+      document.getElementById("opcao_" + qtd).onclick = () =>
+        modala(modal_vlr);
+
+      try {
+        document.getElementById("acerto_alert").remove();
+      } catch {}
+
+      document.getElementById("select_" + qtd).disabled = true;
+      qtd++;
+    }
 
     document.getElementById("overlay").style.animationName = "acerto_sumir";
     document.getElementById("overlay").style.animationFillMode = "forwards";
@@ -329,16 +366,16 @@ verificador = (valor, correto, id_texto, id_select) => {
     let verde = "opcao_" + correto + "a";
     let modal = "modal_" + correto;
     acertos.push(correto);
-    acerto(opcao_id_img, verde, modal);
+    acerto(opcao_id_img, verde, modal, correto);
   } else {
     document.getElementById(id_texto).style.color = "#fe0000";
     document.getElementById(id_select).style.color = "#fe0000";
     erro();
   }
-  console.log(id_texto, id_select, valor, correto);
+  console.log(id_texto, id_select, valor);
 };
 
-acerto = (opcao_id_img, verde, modal) => {
+acerto = (opcao_id_img, verde, modal, correto_opc) => {
   document.getElementById("acerto_alert").style.borderColor = "#01ea77";
   document.getElementById("acerto_alert").innerHTML =
     "<span class='material-icons acerto'> check_circle </span>";
@@ -348,22 +385,21 @@ acerto = (opcao_id_img, verde, modal) => {
   let opcao = document.getElementById(opcao_id_img);
   document.getElementById("content").scrollLeft += -100000;
   opcao.style.animationName = "aparecer";
+  opcao.onclick = () => modala(correto_opc);
 
   setTimeout(() => {
     document.body.style.animationName = "bkg_escuro";
   }, 1000);
 
   console.log(opcao_id_img);
+
   setTimeout(() => {
     let aopcao = document.getElementById(verde);
     aopcao.style.animationName = "mudar";
   }, 10000);
 
-  //modal----------------------------------------------------------------
   let omodal = document.getElementById(modal);
   omodal.style.animationName = "fmodal";
-
-  //modal---------------------------------------------------------------------------------------------
 
   if (!window.matchMedia("(orientation: landscape)").matches) {
     tela_home();
