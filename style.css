@@ -7,7 +7,12 @@ p {
   color: white;
 }
 
+a {
+  color: #006eff;
+}
+
 body {
+  position: fixed;
   margin: 0;
   height: 100vh;
   width: 100%;
@@ -120,7 +125,6 @@ h1 {
   padding: 0;
   overflow-y: hidden;
 }
-
 #navbar {
   user-select: none;
   display: flex;
@@ -141,9 +145,14 @@ h1 {
   flex-direction: row;
   width: 50vh;
   display: flex;
-  transition: transform 2.5s, filter 1.5s ease-in-out;
+  transition: transform 2.5s;
   filter: brightness(150%);
 }
+
+#container:hover{
+  transform: scale(2);
+}
+
 
 #container img,
 #img_1 {
@@ -173,6 +182,25 @@ h1 {
   flex-direction: column;
 }
 
+#header_desk{
+  display: flex;
+  position: fixed;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  top: 0;
+  padding-top: 1vh;
+  width: 45vh;
+  height: 6vh;
+  background-color: #2e2e33;
+}
+
+#header_desk > p{
+  font-size: 3vh;
+  padding: 0;
+  margin-top: 0;
+}
+
 #quiz,
 #textos {
   display: none;
@@ -191,7 +219,7 @@ h1 {
   background-color: black;
 }
 
-#textos > p {
+#textos > p, #textos > a {
   font-size: 3.5vh;
 }
 
@@ -238,8 +266,8 @@ li {
   font-size: 3.5vh;
 }
 
-ol {
-  margin-left: 4vh;
+li{
+  font-size: 2.5vh;
 }
 
 .overlay1 {
@@ -622,7 +650,7 @@ h1 {
   align-items: center;
   justify-content: center;
   background-color: #2e2e33;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 40vh;
   height: 40vh;
@@ -982,9 +1010,8 @@ h1 {
 #modal_16,
 #modal_17,
 #modal_18 {
-  z-index: 0;
-  background-color: pink;
   border-radius: 100%;
+  z-index: 0;
 }
 
 #modal_1 {

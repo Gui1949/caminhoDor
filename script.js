@@ -177,6 +177,11 @@ tela_quiz = () => {
     quiz.style.animationName = "acerto";
 
     if (document.getElementById("quiz").innerHTML == "") {
+        let header_desk = document.createElement("div");
+        header_desk.innerHTML =
+          '<p>Etapas&nbsp</p><span class="material-icons icons" id="btn_quiz">quiz</span>';
+        header_desk.id = 'header_desk'
+        quiz.appendChild(header_desk) 
       let i = 0;
       while (i < 18) {
         let div_opcao = document.createElement("li");
@@ -285,16 +290,25 @@ tela_textos = () => {
     tempo = undefined;
 
     //Remover Overlays
-    document.getElementById("caminho").src = "caminho.jpg"
-    document.getElementById("caminho").style.zIndex = 999
+    document.getElementById("caminho").src = "caminho.jpg";
+    // document.getElementById("caminho").style.zIndex = 3
 
     //Responder todas
-    let qtd = 1
+    let qtd = 1;
 
-    while(qtd < 19){
-      document.getElementById('select_' + qtd).selectedIndex = qtd
-      document.getElementById('select_' + qtd).disabled = true
-      qtd++
+    while (qtd < 19) {
+      document.getElementById("select_" + qtd).selectedIndex = qtd;
+
+      let omodal = document.getElementById("modal_" + qtd);
+      omodal.style.animationName = "fmodal";
+
+      try {
+        document.getElementById("opcao_" + qtd).remove();
+        document.getElementById("acerto_alert").remove();
+      } catch {}
+
+      document.getElementById("select_" + qtd).disabled = true;
+      qtd++;
     }
 
     document.getElementById("overlay").style.animationName = "acerto_sumir";
@@ -369,6 +383,7 @@ acerto = (opcao_id_img, verde, modal) => {
   }, 1000);
 
   console.log(opcao_id_img);
+
   setTimeout(() => {
     let aopcao = document.getElementById(verde);
     aopcao.style.animationName = "mudar";
