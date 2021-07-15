@@ -177,11 +177,13 @@ tela_quiz = () => {
     quiz.style.animationName = "acerto";
 
     if (document.getElementById("quiz").innerHTML == "") {
-      let header_desk = document.createElement("div");
-      header_desk.innerHTML =
-        '<p>Etapas&nbsp</p><span class="material-icons icons" id="btn_quiz">quiz</span>';
-      header_desk.id = "header_desk";
-      quiz.appendChild(header_desk);
+      if (window.matchMedia("(orientation: landscape)").matches) {
+        let header_desk = document.createElement("div");
+        header_desk.innerHTML =
+          '<p>Etapas&nbsp</p><span class="material-icons icons">quiz</span>';
+        header_desk.id = "header_desk";
+        quiz.appendChild(header_desk);
+      }
       let i = 0;
       while (i < 18) {
         let div_opcao = document.createElement("li");
@@ -306,10 +308,9 @@ tela_textos = () => {
       let omodal = document.getElementById("modal_" + qtd);
       omodal.style.animationName = "fmodal";
 
-      let modal_vlr = array_geral[qtd]
+      let modal_vlr = array_geral[qtd];
       document.getElementById("opcao_" + qtd).style.opacity = 0;
-      document.getElementById("opcao_" + qtd).onclick = () =>
-        modala(modal_vlr);
+      document.getElementById("opcao_" + qtd).onclick = () => modala(modal_vlr);
 
       try {
         document.getElementById("acerto_alert").remove();
