@@ -177,11 +177,11 @@ tela_quiz = () => {
     quiz.style.animationName = "acerto";
 
     if (document.getElementById("quiz").innerHTML == "") {
-        let header_desk = document.createElement("div");
-        header_desk.innerHTML =
-          '<p>Etapas&nbsp</p><span class="material-icons icons" id="btn_quiz">quiz</span>';
-        header_desk.id = 'header_desk'
-        quiz.appendChild(header_desk) 
+      let header_desk = document.createElement("div");
+      header_desk.innerHTML =
+        '<p>Etapas&nbsp</p><span class="material-icons icons" id="btn_quiz">quiz</span>';
+      header_desk.id = "header_desk";
+      quiz.appendChild(header_desk);
       let i = 0;
       while (i < 18) {
         let div_opcao = document.createElement("li");
@@ -295,6 +295,10 @@ tela_textos = () => {
 
     //Responder todas
     let qtd = 1;
+    let array_geral = [
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+    ];
+    console.log(array_geral[qtd]);
 
     while (qtd < 19) {
       document.getElementById("select_" + qtd).selectedIndex = qtd;
@@ -302,8 +306,12 @@ tela_textos = () => {
       let omodal = document.getElementById("modal_" + qtd);
       omodal.style.animationName = "fmodal";
 
+      let modal_vlr = array_geral[qtd]
+      document.getElementById("opcao_" + qtd).style.opacity = 0;
+      document.getElementById("opcao_" + qtd).onclick = () =>
+        modala(modal_vlr);
+
       try {
-        document.getElementById("opcao_" + qtd).remove();
         document.getElementById("acerto_alert").remove();
       } catch {}
 
@@ -358,16 +366,16 @@ verificador = (valor, correto, id_texto, id_select) => {
     let verde = "opcao_" + correto + "a";
     let modal = "modal_" + correto;
     acertos.push(correto);
-    acerto(opcao_id_img, verde, modal);
+    acerto(opcao_id_img, verde, modal, correto);
   } else {
     document.getElementById(id_texto).style.color = "#fe0000";
     document.getElementById(id_select).style.color = "#fe0000";
     erro();
   }
-  console.log(id_texto, id_select, valor, correto);
+  console.log(id_texto, id_select, valor);
 };
 
-acerto = (opcao_id_img, verde, modal) => {
+acerto = (opcao_id_img, verde, modal, correto_opc) => {
   document.getElementById("acerto_alert").style.borderColor = "#01ea77";
   document.getElementById("acerto_alert").innerHTML =
     "<span class='material-icons acerto'> check_circle </span>";
@@ -377,6 +385,7 @@ acerto = (opcao_id_img, verde, modal) => {
   let opcao = document.getElementById(opcao_id_img);
   document.getElementById("content").scrollLeft += -100000;
   opcao.style.animationName = "aparecer";
+  opcao.onclick = () => modala(correto_opc);
 
   setTimeout(() => {
     document.body.style.animationName = "bkg_escuro";
