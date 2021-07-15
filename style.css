@@ -860,7 +860,7 @@ h1 {
 
   #landing_bkg {
     image-resolution: 1dpi;
-    filter: brightness(7%) blur(0.2vh);
+    filter: brightness(7%) blur(0.25vh);
     transform: scaleY(3.6);
   }
 
