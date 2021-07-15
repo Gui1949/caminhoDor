@@ -47,6 +47,7 @@ inicio_img1 = () => {
       .setAttribute("onclick", "img_trocar()");
     document.getElementById("img_1").style.display = "flex";
     document.getElementById("img_1").style.opacity = "1";
+    document.getElementById("landing").style.display = "none"
   }, 1000);
 };
 
