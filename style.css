@@ -38,6 +38,7 @@ h1 {
 }
 
 #master {
+  display: flex;
   width: 100%;
   height: 88%;
   position: fixed;
@@ -57,12 +58,12 @@ h1 {
   animation-fill-mode: forwards;
   opacity: 1;
   width: 100%;
-  height: 92%;
+  /* height: 100000000px; */
 }
 
 #landing_bkg {
   z-index: 15;
-  height: 80%;
+  /* height: 500%; */
 }
 
 #landing {
@@ -859,8 +860,7 @@ h1 {
 
   #landing_bkg {
     image-resolution: 1dpi;
-    filter: brightness(7%) blur(0.2vh);
-    transform: scaleY(3.6);
+    filter: brightness(7%) blur(0.5vh);
   }
 
   #branco {
@@ -896,11 +896,14 @@ h1 {
 
   #landing_bkg {
     left: 0%;
+    /* width: 50vh; */
+    height: 100vh;
     top: 0;
-    transform: scale(4);
-    animation: go-back 40s infinite alternate;
-    animation-name: wallpaper;
-    filter: blur(0.3vh) brightness(55%);
+    object-fit: cover;
+    /* transform: scale(1); */
+    /* animation: go-back 40s infinite alternate; */
+    /* animation-name: wallpaper; */
+    filter: blur(0.8vh) brightness(55%);
   }
 
   #descricao_landing {
@@ -913,7 +916,7 @@ h1 {
   }
 }
 
-@media screen and (min-width: 950px) and (orientation: portrait) {
+/* @media screen and (min-width: 950px) and (orientation: portrait) {
   #titulo_landing {
     font-size: 13vw;
   }
@@ -946,7 +949,7 @@ h1 {
     width: 140%;
     position: relative;
   }
-}
+} */
 
 #modal_1,
 #modal_2,
