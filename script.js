@@ -30,7 +30,9 @@ let textos_obj = {
 let timer = "";
 
 //Telas
-
+window.onload = function() {
+  document.getElementById("preto").style.zIndex = "0 ";
+}
 inicio_img1 = () => {
   document.getElementById("landing").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto";
