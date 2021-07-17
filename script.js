@@ -32,6 +32,7 @@ let timer = "";
 //Telas
 window.onload = function() {
   document.getElementById("preto").style.zIndex = "0 ";
+  document.getElementById("master").style.animationName = "acerto_sumir"
 }
 inicio_img1 = () => {
   document.getElementById("landing").style.animationName = "acerto_sumir";
@@ -63,6 +64,7 @@ img_trocar = () => {
 inicio_popup = () => {
   try {
     document.getElementById("landing_bkg").src = "caminho.jpg";
+    document.getElementById("landing_bkg").style.height = "80%";
 
     document.getElementById("img1_container").style.animationName =
       "acerto_sumir";
@@ -77,7 +79,7 @@ inicio_popup = () => {
   setTimeout(() => {
     document.getElementById("inicio_popup").style.display = "flex";
     document.getElementById("inicio_popup").style.opacity = "1";
-  }, 1000);
+  }, 2000);
 };
 
 pos_pop_ini = () => {
@@ -90,6 +92,7 @@ pos_pop_ini = () => {
   } catch {}
 
   document.getElementById("inicio_popup").style.animationName = "acerto";
+  document.getElementById("master").style.animationName = "acerto";
 
   setTimeout(() => {
     try {

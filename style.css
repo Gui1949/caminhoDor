@@ -47,6 +47,7 @@ h1 {
   width: 100%;
   height: 88%;
   position: fixed;
+  animation-fill-mode: forwards;
   border-bottom-left-radius: 8vh;
   border-bottom-right-radius: 8vh;
   background-color: #000000;
@@ -91,6 +92,8 @@ h1 {
 }
 
 #descricao_landing {
+  height: 55vh;
+  overflow-y: scroll;
   width: 60vh;
   font-size: 3vh;
 }
@@ -125,6 +128,7 @@ h1 {
   padding: 0;
   overflow-y: hidden;
 }
+
 #navbar {
   user-select: none;
   display: flex;
@@ -933,7 +937,10 @@ h1 {
   }
 
   #descricao_landing {
-    width: 80vw;
+    width: 88vw;
+    padding-right: 1vh;
+    height: 55vh;
+    overflow-y: scroll;
     font-size: 5.5vw;
   }
 
