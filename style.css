@@ -141,6 +141,8 @@ h1 {
 }
 
 #container {
+  max-width: 50vh;
+  min-width: 50vh;
   max-height: 82vh;
   min-height: 82vh;
   padding-top: 5vh;

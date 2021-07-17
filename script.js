@@ -33,6 +33,7 @@ let timer = "";
 window.onload = function() {
   setTimeout(() => {
     document.getElementById("preto").style.zIndex = "0 ";
+    document.getElementById("preto").style.opacity = "0 ";
   },500)
   document.getElementById("master").style.animationName = "acerto_sumir"
 }
@@ -66,7 +67,7 @@ img_trocar = () => {
 inicio_popup = () => {
   try {
     document.getElementById("landing_bkg").src = "caminho.jpg";
-    document.getElementById("landing_bkg").style.height = "80%";
+    document.getElementById("landing_bkg").style.height = "88%";
 
     document.getElementById("img1_container").style.animationName =
       "acerto_sumir";
