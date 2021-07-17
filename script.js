@@ -31,7 +31,9 @@ let timer = "";
 
 //Telas
 window.onload = function() {
-  document.getElementById("preto").style.zIndex = "0 ";
+  setTimeout(() => {
+    document.getElementById("preto").style.zIndex = "0 ";
+  },500)
   document.getElementById("master").style.animationName = "acerto_sumir"
 }
 inicio_img1 = () => {
