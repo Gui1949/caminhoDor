@@ -659,7 +659,7 @@ h1 {
   height: 4vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 150;
+  z-index: 0;
 }
 
 #fim_popup,
@@ -1330,4 +1330,14 @@ h1 {
   padding-left: 10vh;
     
 }
+}
+@keyframes acerto_sumircorreto {
+  from {
+    z-index: 150;
+    opacity: 1;
+  }
+  to {
+    z-index: 0;
+    opacity: 0;
+  }
 }

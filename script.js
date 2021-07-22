@@ -244,6 +244,8 @@ tela_quiz = () => {
         tempo = 0;
         btn_desistir.remove();
         tela_textos();
+        fimpropaganda();
+     
       };
       btn_desistir.innerHTML = "<p>Finalizar agora</p>";
       btn_desistir.id = "botao_desistir";
@@ -292,6 +294,7 @@ tela_home = () => {
 
 tela_textos = () => {
   if (tempo <= 0 || acertos.length == 18 || tempo == undefined) {
+    fimpropaganda();
     if (!document.getElementById("replay")) {
       document.getElementById("navbar").innerHTML +=
         "<span class='material-icons icons' id='replay' onclick='window.location.reload()'>replay</span>";
@@ -447,6 +450,7 @@ acerto = (opcao_id_img, verde, modal, correto_opc) => {
 
     document.getElementById("container").style.zIndex = 6;
     document.getElementById("acerto_alert").style.animationName = "acerto";
+    document.getElementById("acerto_alert").style.zIndex = 150;
     opcao.style.zIndex = 5;
 
     setTimeout(() => {
@@ -456,8 +460,12 @@ acerto = (opcao_id_img, verde, modal, correto_opc) => {
     setTimeout(() => {
       document.getElementById("container").style.transform = "scale(1.1)";
       document.getElementById("acerto_alert").style.animationName =
-        "acerto_sumir";
+        "acerto_sumircorreto";
+        
       document.getElementById("overlay").style.animationName = "acerto_sumir";
+    
+      
+      
     }, 5000);
 
     setTimeout(() => {
@@ -477,7 +485,9 @@ erro = (texto) => {
   document.getElementById("overlay").style.display = "inherit";
   setTimeout(() => {
     document.getElementById("overlay").style.animationName = "acerto_sumir";
+    document.getElementById("acerto_alert").style.zIndex = 150;
     document.getElementById("acerto_alert").style.animationName = "acerto";
+
   }, 200);
   setTimeout(() => {
     document.getElementById("overlay").style.display = "none";
@@ -495,8 +505,11 @@ erro = (texto) => {
   setTimeout(() => {
     document.getElementById("acerto_alert").style.display = "flex";
     document.getElementById("acerto_alert").style.animationDuration = "1.5s";
+
     document.getElementById("acerto_alert").style.animationName =
-      "acerto_sumir";
+      "acerto_sumircorreto";
+     
+      
   }, 3000);
 };
 
@@ -788,4 +801,43 @@ modala = (v) => {
     default:
       text = "Looking forward to the Weekend";
   }
+};
+
+
+
+
+fimpropaganda = () => {
+  document.getElementById("landing").style.animationName = "acerto_sumir";
+  document.getElementById("img_1").style.animationName = "acerto";
+  document.getElementById("botao_continuar").style.animationName = "acerto";
+  document.getElementById("img_1").src = "caminho_num.jpg";
+  document.getElementById("img_1").style.zIndex = "198";
+  document.getElementById("landing_bkg").src = "";
+  document.getElementById("landing_bkg").style.backgroundColor = "black";
+
+  setTimeout(() => {
+    document.getElementById("botao_continuar").style.display = "flex";
+    document
+      .getElementById("botao_continuar")
+      .setAttribute("onclick", "img_trocar()");
+    document.getElementById("img_1").style.display = "flex";
+    document.getElementById("img_1").style.opacity = "1";
+    document.getElementById("landing").style.display = "none";
+  }, 1000);
+};
+
+fimpropaganda = () => {
+  $("#modalativo").empty();
+  document.getElementById("modalativo").style.animationName = "acerto";
+  document.getElementById("modalativo").style.width = "100%";
+  document.getElementById("modalativo").style.lineHeight= "18vh";
+  document.getElementById("modalativo").style.height = "100%";
+  document.getElementById("modalativo").innerHTML +=
+    "<h1>logo tipo </h1>";
+  document.getElementById("modalativo").innerHTML +=
+    "<h2>Saiba tudo sobre dor no <a href='www.dorcronica.blog.br'>www.dorcronica.blog.br</a></h2>";
+    document.getElementById("modalativo").innerHTML +=
+    "<h2> (e o logo)</h2>";
+    document.getElementById("modalativo").innerHTML +=
+    "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
 };
