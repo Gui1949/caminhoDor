@@ -111,6 +111,8 @@ pos_pop_ini = () => {
   }
 
   document.getElementById("inicio_popup").style.animationName = "acerto_sumir";
+  document.getElementById("inicio_popup").style.animationName = "sumirzindex";
+  
 
   setTimeout(() => {
     //Relógio Start

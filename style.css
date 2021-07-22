@@ -71,7 +71,7 @@ h1 {
   z-index: 15;
   /* height: 500%; */
   left: 0%;
-  /* width: 50vh; */
+  width: 100%;
   height: 100vh;
   top: 0;
   object-fit: cover;
@@ -82,7 +82,7 @@ h1 {
 }
 
 #landing {
-  padding-left: 2vh;
+ 
   margin-right: 2vh;
   z-index: 16;
 }
@@ -141,10 +141,10 @@ h1 {
 }
 
 #container {
-  max-width: 50vh;
-  min-width: 50vh;
-  max-height: 82vh;
-  min-height: 82vh;
+  max-width: 47vh;
+    min-width: 47vh;
+    max-height: 77vh;
+    min-height: 75vh;
   padding-top: 5vh;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -181,7 +181,7 @@ h1 {
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  width: 50vh;
+  width: 46vh;
   height: auto;
   display: flex;
   animation-duration: 1s;
@@ -384,12 +384,13 @@ h1 {
   height: 2.3vh;
   left: 35%;
   width: 5vh;
+  border-top-right-radius: 22%;
 }
 #opcao_3_2a,
 #opcao_3_2 {
   top: 68.8%;
-  height: 3vh;
-  border-bottom-left-radius: 88%;
+  height: 2vh;
+  border-bottom-left-radius: 53%;
   left: 49%;
   width: 6vh;
 }
@@ -398,38 +399,37 @@ h1 {
   top: 51.7%;
   height: 1.5vh;
   left: 32%;
-  width: 6.7vh;
+  width: 6.3vh;
   transform: rotate(-32deg);
 }
 #opcao_4_2a,
 #opcao_4_2 {
-  top: 82.1%;
-  left: 50.8%;
-  height: 1.3vh;
+  top: 82.2%;
+  left: 50.3%;
+  height: 2.3vh;
   width: 5vh;
-  border-bottom-left-radius: 50%;
+  border-bottom-left-radius: 93%;
 }
 #opcao_5a,
 #opcao_5 {
   top: 60.5%;
   height: 3.2vh;
-  left: 50%;
+  left: 49%;
   width: 5.4vh;
 }
 #opcao_6a,
 #opcao_6 {
-  top: 66%;
-  border-bottom-right-radius: 10%;
+  top: 66.3%;
   height: 1.5vh;
-  left: 44%;
+  left: 42%;
   width: 13vh;
 }
 #opcao_6_1 {
   top: -31%;
   border-bottom-right-radius: 10%;
   height: 1.5vh;
-  left: 44%;
-  width: 6vh;
+  left: 31%;
+  width: 9vh;
 }
 #opcao_7_1a,
 #opcao_7_1 {
@@ -444,7 +444,7 @@ h1 {
   top: 84.8%;
   left: 50.8%;
   height: 1.7vh;
-  width: 7.1vh;
+  width: 6.7vh;
 }
 #opcao_8a,
 #opcao_8 {
@@ -468,7 +468,7 @@ h1 {
   left: 60.2%;
   border-bottom-left-radius: 20%;
   border-top-left-radius: 53%;
-  width: 7vh;
+  width: 5vh;
 }
 #opcao_9_3a,
 #opcao_9_3 {
@@ -500,20 +500,22 @@ h1 {
 }
 #opcao_11_1a,
 #opcao_11_1 {
-  top: 25.8%;
-  left: 30.5%;
-  width: 10.3vh;
-  height: 3.7vh;
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
+    top: 25.8%;
+    left: 29.5%;
+    width: 10.3vh;
+    height: 3.7vh;
+    border-top-right-radius: 56%;
+    border-bottom-right-radius: 48%;
 }
+
+
 #opcao_11_2a,
 #opcao_11_2 {
   top: 30%;
   height: 5vh;
-  left: 30%;
+  left: 28%;
   width: 11vh;
-  border-top-right-radius: 100%;
+  border-top-right-radius: 68%;
   border-bottom-right-radius: 100%;
 }
 #opcao_12a,
@@ -595,7 +597,8 @@ h1 {
   width: 6vh;
   height: 2.5vh;
   left: 38.5%;
-  border-bottom-right-radius: 50%;
+  border-top-right-radius: 43%;
+  border-bottom-right-radius: 45%;
 }
 #opcao_16_2a,
 #opcao_16_2 {
@@ -603,6 +606,18 @@ h1 {
   width: 8.5vh;
   height: 4vh;
   left: 76%;
+}
+#opcao_16_3a,
+#opcao_16_3 {
+
+  top: 72.4%;
+  width: 3.6vh;
+  height: 1.2vh;
+  left: 66%;
+  border-top-left-radius: 68%;
+  border-top-right-radius: 68%;
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 43%;
 }
 #opcao_17a,
 #opcao_17 {
@@ -613,22 +628,24 @@ h1 {
 }
 #opcao_18_1a,
 #opcao_18_1 {
-  top: 77%;
+  top: 77.2%;
   width: 5vh;
-  height: 1vh;
+  height: 0.6vh;
   left: 62.5%;
+
 }
 #opcao_18_2a,
 #opcao_18_2 {
+  border-bottom-right-radius: 63%;
   top: 77.7%;
-  width: 3.16vh;
-  height: 1.1vh;
-  left: 62%;
+  width: 3vh;
+  height: 1.6vh;
+  left: 62.14%;
 }
 #opcao_18_3a,
 #opcao_18_3 {
   top: 81%;
-  width: 5.3vh;
+  width: 4.5vh;
   height: 4vh;
   left: 83.9%;
 }
@@ -900,7 +917,7 @@ h1 {
 
   #landing {
     top: 1%;
-    margin-left: 10vh;
+    
   }
 
   #landing_bkg {
@@ -908,9 +925,6 @@ h1 {
     filter: brightness(7%) blur(0.5vh);
   }
 
-  #branco {
-    width: 89%;
-  }
 
   #master {
     height: 92%;
@@ -940,7 +954,7 @@ h1 {
   }
 
   #descricao_landing {
-    width: 88vw;
+    width: 87vw;
     padding-right: 1vh;
     height: 55vh;
     overflow-y: scroll;
@@ -948,7 +962,7 @@ h1 {
   }
 
   #branco {
-    width: 89%;
+    width: 88%;
   }
 
   #quiz, #textos{
@@ -1247,7 +1261,15 @@ h1 {
     z-index: 2;
   }
 }
+@keyframes sumirzindex {
+  from {
+    z-index: 2;
+  }
 
+  to {
+    z-index: 0;
+  }
+}
 /* width */
 
 ::-webkit-scrollbar {
@@ -1289,4 +1311,23 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   z-index: 17;
+}
+#encaixe {
+  padding-left:22px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+  width: 80%;
+  /* height: 100000000px; */
+}
+
+@media screen and (orientation: landscape){
+#encaixe{
+  padding-left: 10vh;
+    
+}
 }
