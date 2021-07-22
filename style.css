@@ -798,7 +798,7 @@ h1 {
   border-color: #01ea77;
   position: absolute;
   height: 80%;
-  width: 80%;
+  width: 88%;
   margin-top: 1vh;
   left: 0;
   right: 0;
@@ -961,9 +961,6 @@ h1 {
     font-size: 5.5vw;
   }
 
-  #branco {
-    width: 88%;
-  }
 
   #quiz, #textos{
     padding-top: 0;
