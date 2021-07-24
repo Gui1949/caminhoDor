@@ -832,12 +832,11 @@ fimpropaganda = () => {
   document.getElementById("modalativo").style.width = "100%";
   document.getElementById("modalativo").style.lineHeight= "18vh";
   document.getElementById("modalativo").style.height = "100%";
+  document.getElementById("modalativo").style.background=" linear-gradient(to bottom,  #2d318e, #1d2c3e)"
   document.getElementById("modalativo").innerHTML +=
-    "<h1>logo tipo </h1>";
+    "<img href='www.dorcronica.blog.br' src='./logo-quadrado2.png' id='caminho' style='z-index: 2' alt='' />";
   document.getElementById("modalativo").innerHTML +=
-    "<h2>Saiba tudo sobre dor no <a href='www.dorcronica.blog.br'>www.dorcronica.blog.br</a></h2>";
-    document.getElementById("modalativo").innerHTML +=
-    "<h2> (e o logo)</h2>";
+    "<h2>Saiba tudo sobre dor no <a href='www.dorcronica.blog.br'style='color: white;'>www.dorcronica.blog.br</a></h2>";
     document.getElementById("modalativo").innerHTML +=
     "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
 };
