@@ -54,8 +54,7 @@
         <br />
         <br />
         A ilustração do Caminho da Dor seguinte, é uma síntese do cenário onde
-        isso acontece. O quadrado inferior corresponde a um zoom do local
-        indicado acima.
+        isso acontece.
         <br />
         <br />
         Examine a figura com atenção.
@@ -79,6 +78,7 @@
         <br />
         As etapas foram listadas aleatoriamente na tela
         <span class="material-icons texto"> quiz </span>.
+        Exemplos de etapas: tronco cerebral, sinapse, interneurônio...
         <br />
         <br />
         O desafio consiste em relacionar corretamente todas as etapas com seus
@@ -87,8 +87,10 @@
         qualquer número/etapa.
         <br />
         <br />
-        Após cada acerto, é possível se obter uma explicação clicando duas vezes
+       
+        Após cada acerto, é possível se obter uma explicação clicando 
         no respectivo número ou texto.
+
         <br />
         <br />
         Após cada erro é possível tentar de novo o mesmo item ou qualquer outro.
@@ -97,14 +99,17 @@
         O limite de tempo é de 10 minutos.
         <br />
         <br />
-        Completado o desafio ou exaurido o tempo, é possível acessar uma relação
-        de todas as etapas e suas explicações na tela
-        <span class="material-icons texto">question_answer</span>.
+        Completado o desafio ou exaurido o tempo, é possível acessar uma relação 
+        de todas as etapas e suas explicações na tela <span class="material-icons texto">question_answer</span>, ou clicando
+        nos textos ou números da figura completa na tela <span class="material-icons texto"> home </span>.
+
+        
         <br />
         <br />
         O desafio pode ser repetido quantas vezes quiser, sempre começando do
         zero, clicando na tela
         <span class="material-icons texto">replay</span>.
+        
         <br />
         <br />
         Se quiser consultar as regras do jogo, clique em
@@ -123,9 +128,10 @@
       <div id="overlay"></div>
       <div id="content">
         <div id="modalativo"></div>
+        <div id="propaganda"></div>
 
         <div id="fim_popup"></div>
-
+        
         <div id="acerto_alert"></div>
         <div id="relogio"><p id="txt_relogio"></p></div>
 
@@ -352,20 +358,17 @@
 
           <div id="modal_17" class="modal" onclick="modala(17)"></div>
           <div id="modal_18" class="modal" onclick="modala(18)"></div>
-
+          <div id="textinho"></div>
           <!-- modaldoido-->
         </div>
         <div id="quiz"></div>
         <div id="textos">
-          <br />
-          <h1 >
-        Se você carecer de familiaridade com o tema, recomendo ler 
-        XXXXXXXXXXXXX (5 min) e/ou assistir
-        XXXXXXXXXXXXX (6 min) ANTES de ir adiante.
-        Garanto que o teste será mais produtivo.
-      </h1>
-      <br>
-      <br />
+          <div id="textinho2"></div>
+          <h1 id="reposta" onclick="show_respostas(this)" style="text-align: center;">respostas</h1>
+                
+          <br>
+              </br>
+
           <h1 id="maodireita" onclick="show_respostas(this)">
             1 - Mão Direita
           </h1>
@@ -574,50 +577,11 @@
 
           <br />
 
-          <h1>Referências</h1>
-
-          <br />
-
-          <a
-            href="http://www.escs.edu.br/arquivos/modulacaodor.pdf
-          "
-            >http://www.escs.edu.br/arquivos/modulacaodor.pdf
-          </a>
-
-          <br />
-
-          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438523/"
-            >https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438523/</a
-          >
-
-          <br />
-
-          <a
-            href="https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0034-70942007000100011&lng=en&nrm=iso&tlng=en
-          "
-            >https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0034-70942007000100011&lng=en&nrm=iso&tlng=en
-          </a>
-
-          <br />
-
-          <a
-            href="https://www.nursingtimes.net/clinical-archive/pain-management/anatomy-and-physiology-of-pain-18-09-2008/"
-            >https://www.nursingtimes.net/clinical-archive/pain-management/anatomy-and-physiology-of-pain-18-09-2008/</a
-          >
-
-          <br />
-
-          <a href="https://www.rnceus.com/ages/nociceptive.htm"
-            >https://www.rnceus.com/ages/nociceptive.htm</a
-          >
-
-          <br />
-
-          <a
-            href="https://www.sciencedirect.com/science/article/pii/S0007091217342629"
-            >https://www.sciencedirect.com/science/article/pii/S0007091217342629</a
-          >
-
+          <h1 >
+            Se você carecer de familiaridade com o tema, recomendo ler XXXXXXX (5 min) 
+            e/ou assistir XXXXXXX (6 min) e faça o teste de novo. 
+             Garanto que o teste será bem mais produtivo.
+          </h1>
           <br />
           <br />
 

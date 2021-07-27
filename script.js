@@ -182,6 +182,11 @@ tela_quiz = () => {
       "material-icons icons_selected";
     document.getElementById("branco").style.display = "flex";
 
+    //sumir
+    document.getElementById("overlay").style.animationName = "acerto_sumir";
+    document.getElementById("overlay").style.animationFillMode = "forwards";
+    document.getElementById("fim_popup").style.animationName = "acerto_sumir";
+    //sumir
     let quiz = document.getElementById("quiz");
     quiz.style.display = "flex";
     quiz.style.animationName = "acerto";
@@ -244,7 +249,7 @@ tela_quiz = () => {
         tempo = 0;
         btn_desistir.remove();
         tela_textos();
-        fimpropaganda();
+       
      
       };
       btn_desistir.innerHTML = "<p>Finalizar agora</p>";
@@ -266,25 +271,27 @@ tela_home = () => {
   setTimeout(() => {
     document.getElementById("btn_home").className =
       "material-icons icons_selected";
-    document.getElementById("btn_quiz").className = "material-icons icons";
+      document.getElementById("btn_quiz").className = "material-icons icons";
     document.getElementById("btn_resolucao").className = "material-icons icons";
 
-    if (!window.matchMedia("(orientation: landscape)").matches) {
-      document.getElementById("quiz").style.display = "none";
-    }
+   
 
     document.getElementById("textos").style.display = "none";
     document.getElementById("relogio_upper").innerHTML = "";
 
     document.getElementById("container").style.animationName = "acerto";
     document.getElementById("container").style.display = "flex";
+ //sumir
+ document.getElementById("quiz").style.display = "none";
+ document.getElementById("quiz").style.animationFillMode = "forwards";
+ document.getElementById("fim_popup").style.animationName = "acerto_sumir";
 
-    if (window.matchMedia("(orientation: portrait)").matches) {
-      document.getElementById("quiz").style.animationName = "acerto_sumir";
-    } else {
-      document.getElementById("quiz").style.display = "flex";
-      document.getElementById("quiz").style.animationName = "acerto";
-    }
+ document.getElementById("quiz").style.animationName = "acerto_sumir";
+ document.getElementById("textos").style.animationName = "acerto";
+ document.getElementById("relogio_upper").style.animationName =
+   "acerto_sumir";
+
+//sumir
 
     try {
       document.getElementById("relogio").style.display = "flex";
@@ -294,10 +301,12 @@ tela_home = () => {
 
 tela_textos = () => {
   if (tempo <= 0 || acertos.length == 18 || tempo == undefined) {
-    fimpropaganda();
+   
+    
+    
     if (!document.getElementById("replay")) {
       document.getElementById("navbar").innerHTML +=
-        "<span class='material-icons icons' id='replay' onclick='window.location.reload()'>replay</span>";
+        "<span class='material-icons icons' id='replay' onclick='fimpropaganda()'>replay</span>";
     }
 
     clearInterval(timer);
@@ -339,11 +348,11 @@ tela_textos = () => {
 
     document.getElementById("quiz").style.animationName = "acerto_sumir";
     document.getElementById("textos").style.animationName = "acerto";
-    document.getElementById("relogio_upper").style.animationName =
-      "acerto_sumir";
+    document.getElementById("relogio_upper").style.animationName ="acerto_sumir";
 
     try {
       document.getElementById("btn_ajuda").remove();
+     
       document.getElementById("relogio").remove();
     } catch {}
 
@@ -361,6 +370,7 @@ tela_textos = () => {
       document.getElementById("textos").style.display = "flex";
       document.getElementById("quiz").style.display = "none";
       document.getElementById("container").style.display = "none";
+      textinho();
     }, 1000);
   } else {
     erro("Finalize o questionário para acessar essa função.");
@@ -807,36 +817,25 @@ modala = (v) => {
 
 
 fimpropaganda = () => {
-  document.getElementById("landing").style.animationName = "acerto_sumir";
-  document.getElementById("img_1").style.animationName = "acerto";
-  document.getElementById("botao_continuar").style.animationName = "acerto";
-  document.getElementById("img_1").src = "caminho_num.jpg";
-  document.getElementById("img_1").style.zIndex = "198";
-  document.getElementById("landing_bkg").src = "";
-  document.getElementById("landing_bkg").style.backgroundColor = "black";
-
-  setTimeout(() => {
-    document.getElementById("botao_continuar").style.display = "flex";
-    document
-      .getElementById("botao_continuar")
-      .setAttribute("onclick", "img_trocar()");
-    document.getElementById("img_1").style.display = "flex";
-    document.getElementById("img_1").style.opacity = "1";
-    document.getElementById("landing").style.display = "none";
-  }, 1000);
+  $("#propaganda").empty();
+  document.getElementById("propaganda").style.animationName = "acerto";
+  document.getElementById("propaganda").style.width = "100%";
+  document.getElementById("propaganda").style.lineHeight= "18vh";
+  document.getElementById("propaganda").style.height = "100%";
+  document.getElementById("propaganda").style.background=" linear-gradient(to bottom,  #2d318e, #1d2c3e)";
+  document.getElementById("propaganda").innerHTML +=
+    "<a href='https://www.dorcronica.blog.br/'style='color: white;'><img  src='./logo-quadrado2.png' id='logo' style='z-index: 2' alt='' /></a>";
+  document.getElementById("propaganda").innerHTML +=
+    "<h2 style='color: white;'>Saiba tudo sobre dor no <a href='https://www.dorcronica.blog.br/'style='color: white;'>www.dorcronica.blog.br</a></h2>";
+    document.getElementById("propaganda").innerHTML +=
+    "<div id='femodal' onclick='window.location.reload()'><p>OK</p></div>";
+};
+textinho = () => {
+  $("#textinho").empty();
+document.getElementById("textinho").style.borderColor = "#01ea77";
+document.getElementById("textinho").innerHTML += "<p>Clique nos textos ou números para ver as explicações</p>";
+$("#textinho2").empty();
+document.getElementById("textinho2").style.borderColor = "#01ea77";
+document.getElementById("textinho2").innerHTML += "<p>Clique nos textos ou números para ver as explicações</p>";
 };
 
-fimpropaganda = () => {
-  $("#modalativo").empty();
-  document.getElementById("modalativo").style.animationName = "acerto";
-  document.getElementById("modalativo").style.width = "100%";
-  document.getElementById("modalativo").style.lineHeight= "18vh";
-  document.getElementById("modalativo").style.height = "100%";
-  document.getElementById("modalativo").style.background=" linear-gradient(to bottom,  #2d318e, #1d2c3e)"
-  document.getElementById("modalativo").innerHTML +=
-    "<img href='www.dorcronica.blog.br' src='./logo-quadrado2.png' id='logo' style='z-index: 2' alt='' />";
-  document.getElementById("modalativo").innerHTML +=
-    "<h2>Saiba tudo sobre dor no <a href='www.dorcronica.blog.br'style='color: white;'>www.dorcronica.blog.br</a></h2>";
-    document.getElementById("modalativo").innerHTML +=
-    "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
-};

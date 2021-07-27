@@ -1296,6 +1296,8 @@ h1 {
 #quiz {
   max-width: 40vh;
   min-width: 40vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 #preto {
   background-color: black;
@@ -1347,3 +1349,70 @@ h2{
 #logo{
   width: 40vh;
 }
+#modalativo > p {
+  color: white;
+  padding: 0 0.5vh;
+  font-size: 2.5vh;
+}
+
+#propaganda {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  border: 0.5vh solid;
+  border-radius: 1vh;
+  background-color: #000000;
+  width: 38vh;
+  padding: 1vh 1vh;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  top: 50%;
+  height: auto;
+  opacity: 0;
+  align-self: flex-end;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 16;
+}
+
+@media screen and (orientation: landscape) {
+  #img_1 {
+    width: 115%;
+    height: 100%;
+  }
+}
+
+#textinho2,#textinho {
+  opacity: 1;
+  align-self: flex-end;
+  position: absolute;
+  top: 95%;
+  height: 4vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0.5vh solid;
+    border-radius: 1vh;
+    background-color: #000000;
+    width: max-content;
+    padding: 1vh 1vh;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  #textinho2,#textinho > p {
+    color: white;
+    padding: 0 0.5vh;
+    font-size: 2.5vh;
+  }
+  @media screen and (orientation: portrait) {
+    #textinho2,#textinho {
+      width: 63%;
+    }
+  }
+  #textinho2{
+  height: 7vh;
+  } 
