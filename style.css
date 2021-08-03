@@ -946,6 +946,7 @@ h1 {
   #landing_bkg {
     image-resolution: 1dpi;
     filter: brightness(7%) blur(0.5vh);
+    background: black;
   }
 
 
