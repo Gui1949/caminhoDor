@@ -22,7 +22,7 @@ let textos_obj = {
     { 15: "Córtex Cerebral" },
     { 16: "Neurotrans 5HT/NA" },
     { 17: "Interneurônio" },
-    { 18: "Encefalinas (Opioide)" },
+    { 18: "Encefalinas" },
   ],
 };
 
@@ -58,7 +58,7 @@ inicio_img1 = () => {
 };
 
 img_trocar = () => {
-  document.getElementById("img_1").src = "caminho_textos.jpg";
+  document.getElementById("img_1").src = "caminho_textos1.png";
   document
     .getElementById("botao_continuar")
     .setAttribute("onclick", "inicio_popup()");
@@ -299,84 +299,77 @@ tela_home = () => {
   }, 1000);
 };
 
-tela_textos = () => {
-  if (tempo <= 0 || acertos.length == 18 || tempo == undefined) {
-   
+
+    tela_textos = () => {
+      if (tempo <= 0 || acertos.length == 18 || tempo == undefined) {
+        
+        
+        document.getElementById("textos").style.animationName = "acerto_sumir";   
+        if (!document.getElementById("replay")) {
+          document.getElementById("navbar").innerHTML +=
+            "<span class='material-icons icons' id='replay' onclick='fimpropaganda()'>replay</span>";
+        }
+    
+        clearInterval(timer);
+        console.log(tempo);
+        tempo = undefined;
     
     
-    if (!document.getElementById("replay")) {
-      document.getElementById("navbar").innerHTML +=
-        "<span class='material-icons icons' id='replay' onclick='fimpropaganda()'>replay</span>";
-    }
+        try {
+          document.getElementById("btn_ajuda").remove();
+         
+          document.getElementById("relogio").remove();
+        } catch {}
+    
+        document.getElementById("overlay").style.animationName = "acerto_sumir";
+        document.getElementById("overlay").style.animationFillMode = "forwards";
+        document.getElementById("fim_popup").style.animationName = "acerto_sumir";
+        document.getElementById("quiz").style.animationName = "acerto_sumir";
+        document.getElementById("textos").style.animationName = "acerto";
+        document.getElementById("relogio_upper").style.animationName ="acerto_sumir";
+        document.getElementById("container").style.animationName = "acerto_sumir";
+        document.getElementById("overlay").style.display = "none"; 
+        document.getElementById("botao_textos").style.display = "none";
+        document.getElementById("fim_popup").style.display = "none"; 
+        document.getElementById("btn_home").className = "material-icons icons";
+        document.getElementById("btn_resolucao").className =
+            "material-icons icons_selected";
+        document.getElementById("btn_quiz").className = "material-icons icons";
+        document.getElementById("textos").style.display = "flex";
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("container").style.display = "none";
+          textinho();
+          responter();
+      } else {
+        erro("Finalize o questionário para acessar essa função.");
+      }
+    };
+responter =()=>{
+  let qtd = 1;
+        let array_geral = [
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+        ];
+        console.log(array_geral[qtd]);
+      
+        while (qtd < 19) {
+          document.getElementById("select_" + qtd).selectedIndex = qtd;
+      
+          let omodal = document.getElementById("modal_" + qtd);
+          omodal.style.animationName = "fmodal";
+      
+          let modal_vlr = array_geral[qtd];
+          document.getElementById("opcao_" + qtd).style.opacity = 0;
+          document.getElementById("opcao_" + qtd).onclick = () => modala(modal_vlr);
+      
+          try {
+            document.getElementById("acerto_alert").remove();
+          } catch {}
+      
+          document.getElementById("select_" + qtd).disabled = true;
+          qtd++;
+        }
 
-    clearInterval(timer);
-    console.log(tempo);
-    tempo = undefined;
-
-    //Remover Overlays
-    document.getElementById("caminho").src = "caminho.jpg";
-    // document.getElementById("caminho").style.zIndex = 3
-
-    //Responder todas
-    let qtd = 1;
-    let array_geral = [
-      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-    ];
-    console.log(array_geral[qtd]);
-
-    while (qtd < 19) {
-      document.getElementById("select_" + qtd).selectedIndex = qtd;
-
-      let omodal = document.getElementById("modal_" + qtd);
-      omodal.style.animationName = "fmodal";
-
-      let modal_vlr = array_geral[qtd];
-      document.getElementById("opcao_" + qtd).style.opacity = 0;
-      document.getElementById("opcao_" + qtd).onclick = () => modala(modal_vlr);
-
-      try {
-        document.getElementById("acerto_alert").remove();
-      } catch {}
-
-      document.getElementById("select_" + qtd).disabled = true;
-      qtd++;
-    }
-
-    document.getElementById("overlay").style.animationName = "acerto_sumir";
-    document.getElementById("overlay").style.animationFillMode = "forwards";
-    document.getElementById("fim_popup").style.animationName = "acerto_sumir";
-
-    document.getElementById("quiz").style.animationName = "acerto_sumir";
-    document.getElementById("textos").style.animationName = "acerto";
-    document.getElementById("relogio_upper").style.animationName ="acerto_sumir";
-
-    try {
-      document.getElementById("btn_ajuda").remove();
-     
-      document.getElementById("relogio").remove();
-    } catch {}
-
-    document.getElementById("container").style.animationName = "acerto_sumir";
-
-    setTimeout(() => {
-      document.getElementById("fim_popup").style.display = "none";
-      document.getElementById("overlay").style.display = "none";
-
-      document.getElementById("btn_home").className = "material-icons icons";
-      document.getElementById("btn_resolucao").className =
-        "material-icons icons_selected";
-      document.getElementById("btn_quiz").className = "material-icons icons";
-
-      document.getElementById("textos").style.display = "flex";
-      document.getElementById("quiz").style.display = "none";
-      document.getElementById("container").style.display = "none";
-      textinho();
-    }, 1000);
-  } else {
-    erro("Finalize o questionário para acessar essa função.");
-  }
-};
-
+}
 // Fim Telas
 
 //Ações
@@ -524,6 +517,7 @@ erro = (texto) => {
 };
 
 fim_popup = (estado) => {
+  
   document.getElementById("relogio").style.display = "none";
   document.getElementById("relogio_upper").style.display = "none";
 
@@ -539,26 +533,30 @@ fim_popup = (estado) => {
 
   // Estado = 0 -> Fim por acertos;
   // Estado = 1 -> Fim por tempo;
-
+  
   if (estado == 0) {
+    
     document.getElementById("fim_popup").innerHTML =
       "<span class='material-icons fim_icon'> emoji_events </span>";
     document.getElementById("fim_popup").innerHTML +=
       "<p>Parabéns, você acertou todas as questões!</p>";
     document.getElementById("fim_popup").innerHTML +=
-      "<div id='botao_textos' onclick='tela_textos()'><p>Ir para respostas</p></div>";
+      "<div id='botao_textos' onclick='tela_textos();'><p>Ir para respostas</p></div>";
+     
   }
 
   if (estado == 1) {
+    
     estado = undefined;
     document.getElementById("fim_popup").innerHTML =
       "<span class='material-icons fim_icon'> sentiment_dissatisfied </span>";
     document.getElementById("fim_popup").innerHTML +=
       "<p>Que pena, o seu tempo esgotou...</p>";
     document.getElementById("fim_popup").innerHTML +=
-      "<div id='botao_textos' onclick='window.location.reload()'><p>Tentar Novamente</p></div>";
+      "<div id='botao_textos' onclick='fimpropaganda()'><p>Tentar Novamente</p></div>";
     document.getElementById("fim_popup").innerHTML +=
-      "<div id='botao_textos' onclick='tela_textos()'><p>Ver respostas</p></div>";
+      "<div id='botao_textos' onclick='tela_textos();'><p>Ver respostas</p></div>";
+      
   }
 };
 
@@ -680,9 +678,9 @@ modala = (v) => {
       document.getElementById("modalativo").innerHTML +=
         " <h1>9 - Tronco cerebral</h1>";
       document.getElementById("modalativo").innerHTML +=
-        "<p>Tronco cerebral composto de três componentes:</p>";
+        "<p style='height: 7.2vh;'>Tronco cerebral composto de três componentes:</p>";
       document.getElementById("modalativo").innerHTML +=
-        "<ol> <li>Mesencéfalo</li> <li>Ponte</li> <li>Medula</li> </ol>";
+        "<ol style='margin-top: 0;'> <li>Mesencéfalo</li> <li>Ponte</li> <li>Medula</li> </ol>";
       document.getElementById("modalativo").innerHTML +=
         "<div id='femodal' onclick='modalf ()'><p>OK</p></div>";
       break;
@@ -833,9 +831,9 @@ fimpropaganda = () => {
 textinho = () => {
   $("#textinho").empty();
 document.getElementById("textinho").style.borderColor = "#01ea77";
-document.getElementById("textinho").innerHTML += "<p>Clique nos textos ou números para ver as explicações</p>";
+document.getElementById("textinho").innerHTML += "<p>Clique nos textos para ver as explicações</p>";
 $("#textinho2").empty();
 document.getElementById("textinho2").style.borderColor = "#01ea77";
-document.getElementById("textinho2").innerHTML += "<p>Clique nos textos ou números para ver as explicações</p>";
+document.getElementById("textinho2").innerHTML += "<p>Clique nos textos para ver as explicações</p>";
 };
 
