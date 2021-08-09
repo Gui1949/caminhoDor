@@ -58,7 +58,7 @@ inicio_img1 = () => {
 };
 
 img_trocar = () => {
-  document.getElementById("img_1").src = "caminho_textos1.png";
+  document.getElementById("img_1").src = "caminho_textos.png";
   document
     .getElementById("botao_continuar")
     .setAttribute("onclick", "inicio_popup()");
