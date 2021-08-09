@@ -971,6 +971,7 @@ h1 {
   #landing,
   #landing_bkg {
     background-color: none;
+    background-color: black;
   }
 
   #titulo_landing {
