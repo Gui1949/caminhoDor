@@ -842,8 +842,8 @@ h1 {
 #botao_continuar {
   margin-top: 3vh;
   display: none;
-  z-index: 212;
-  top: 82%;
+  z-index: 100;
+  top: 84%;
   position: absolute;
 
 }
@@ -1533,10 +1533,4 @@ text-align: center;
 }
 h4{
   margin: 10px;
-}
-@media screen and (orientation: portrait) {
-  #acerto_alert {
-    
-    width: 90%;
-  }
 }

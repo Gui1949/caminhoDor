@@ -420,8 +420,6 @@ tela_textos = () => {
       document.getElementById("btn_quiz").className = "material-icons icons";
 
       document.getElementById("textos").style.display = "flex";
-      document.getElementById("acerto_alert").style.width = "90%";
-      
       document.getElementById("quiz").style.display = "none";
       document.getElementById("container").style.display = "none";
       textinho();
