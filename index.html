@@ -48,30 +48,29 @@
       <h1 id="titulo_landing">Caminho da Dor</h1>
       <p id="descricao_landing">
         O Caminho da Dor é um passatempo educacional que visa testar o
-        conhecimento sobre como a dor é processada no organismo. O cenário é o
-        Sistema Nervoso, por onde sinais de perigo transitam da periferia até o
-        cérebro.
+        conhecimento sobre como a dor é processada no organismo.
         <br />
         <br />
-        A ilustração do Caminho da Dor seguinte, é uma síntese do cenário onde
-        isso acontece.
+        
         <br />
         <br />
-        Examine a figura com atenção.
+      
         <br />
         
       </p>
-      <div id="botao_iniciar" onclick="inicio_img1()"><p>Iniciar</p></div>
+      <div id="botao_iniciar" onclick="inicio_img1()"><p>CONTINUAR</p></div>
+      <div id="botao_pular" onclick="inicio_popup()"><p>PULAR INTRO</p></div>
     </div>
     </div>
 
     <div id="img1_container">
+      <p id="menu" >O cenário é o Sistema nervoso, por onde sinais de perigo transitam da periferia até o cérebro.</p>
       <img src="" id="img_1" alt="" />
       <div id="botao_continuar"><p>Continuar</p></div>
     </div>
 
     <div id="inicio_popup">
-      <h1>Como Jogar?</h1>
+      <h3>REGRAS DO JOGO</h3>
       <p id="intro">
         Cada número na imagem representa uma etapa no Caminho da Dor.
         <br />
@@ -113,8 +112,22 @@
         <br />
         <br />
         Se quiser consultar as regras do jogo, clique em
-        <span class="material-icons texto">help</span>.
-      </p>
+        <span class="material-icons texto">add</span>.
+        <br />
+        <br />
+      Resumo ícones do rodapé :
+      <br />
+      Ícone <span class="material-icons texto">home</span> O Caminho da Dor.
+      <br />
+      Ícone <span class="material-icons texto">quiz</span> Lista das Etapas.
+      <br />
+Ícone <span class="material-icons texto">add</span> Volta às Regras do Jogo.
+<br />
+Ícone <span class="material-icons texto">replay</span> Para começar de novo.
+<br />
+Ícone <span class="material-icons texto">quiz</span> Etapas e explicações respectivas, disponível somente após finalizado o teste.
+
+</p>
       <div
         id="botao_iniciar"
         style="border-color: #006eff"
@@ -137,20 +150,22 @@
 
         <div id="container">
           <div id="branco"></div>
-          <div id="opcao_1a" class="overlay1"></div>
+          <div id="opcao_1a" class="overlay1">
+            <div id="opcao_1_1a" class="overlay1"></div>
+          </div>
 
           <div id="opcao_2a">
-            <div id="opcao_2_1a" class="overlay1"></div>
-            <div id="opcao_2_2a" class="overlay1"></div>
+            <div id="opcao_2_1a" class="overlay1">
+              <div id="opcao_2_4a" class="overlay1"></div>
+            </div>
+            <div id="opcao_2_2a" class="overlay1">
+              <div id="opcao_2_3a" class="overlay1"></div>
+            </div>
           </div>
 
           <div id="opcao_3a">
             <div id="opcao_3_1a" class="overlay1"></div>
-            <div
-              id="opcao_3_1a"
-              class="overlay1"
-              style="left: 38%; top: 59.1%; height: 2vh"
-            ></div>
+            <div id="opcao_3_1a" class="overlay1" style="width: 4.8vh;left: 38%;top: 53.9%;height: 2vh;border-top-right-radius: 62%;"></div>
             <div id="opcao_3_2a" class="overlay1">
               <div id="opcao_3_2" class="overlay1" style="    border-bottom-left-radius: 25%;    left: 16%;    top: 28.8%;    width: 5vh;"></div>
             </div>
@@ -162,7 +177,9 @@
               </div>
           </div>
 
-          <div id="opcao_5a" class="overlay1"></div>
+          <div id="opcao_5a" class="overlay1">
+            <div id="opcao_5_1a" class="overlay1"></div>
+          </div>
 
           <div id="opcao_6a" class="overlay1"></div>
 
@@ -192,7 +209,9 @@
             <div id="opcao_12_1a" class="overlay1"></div>
           </div>
 
-          <div id="opcao_13a" class="overlay1"></div>
+          <div id="opcao_13a" class="overlay1">
+            <div id="opcao_13_1a" class="overlay1" style="width: 9vh;z-index: 2;height: 1.2vh;top: 31.8%;left: 47%;"></div>
+          </div>
 
           <div id="opcao_14a">
             <div id="opcao_14_1a" class="overlay1"></div>
@@ -209,7 +228,9 @@
 
           <div id="opcao_16a">
             <div id="opcao_16_1a" class="overlay1"></div>
-            <div id="opcao_16_2a" class="overlay1"></div>
+            <div id="opcao_16_2a" class="overlay1">
+              <div id="opcao_16_2a" class="overlay1" style="top: 58.2%;width: 7.5vh;height: 4vh;left: 13%;"></div>
+            </div>
             <div id="opcao_16_3a" class="overlay"></div>
           </div>
 
@@ -218,44 +239,43 @@
           <div id="opcao_18a">
             <div id="opcao_18_1a" class="overlay1"></div>
             <div id="opcao_18_2a" class="overlay1"></div>
+            <div id="opcao_18_3a" class="overlay1"></div>
           
           </div>
 
-          <img src="./caminho.png" id="caminho" style="z-index: 2" alt="" />
+          <img src="./caminhonovo.png" id="caminho" style="z-index: 2" alt="" />
 
           <div id="opcao_1" class="overlay">
-            <div
-              id="opcao_1"
-              class="overlay"
-              style="width: 5vh; z-index: 2; height: 1vh; top: 94.8%; left: 47%;"
-            ></div>
+            <div id="opcao_1_1" class="overlay"></div>
           </div>
 
           <div id="opcao_2">
-            <div id="opcao_2_1" class="overlay"></div>
-            <div id="opcao_2_2" class="overlay"></div>
+            <div id="opcao_2_1" class="overlay">
+              <div id="opcao_2_4" class="overlay"></div>
+            </div>
+            <div id="opcao_2_2" class="overlay">
+              <div id="opcao_2_3" class="overlay"></div>
+            </div>
           </div>
 
           <div id="opcao_3">
             <div id="opcao_3_1" class="overlay"></div>
-            <div
-              id="opcao_3_1"
-              class="overlay"
-              style="left: 37%; top: 59.1%; height: 2vh;    border-top-right-radius: 56%;"
-            ></div>
+            <div id="opcao_3_1" class="overlay" style="width: 4.8vh;left: 38%;top: 53.9%;height: 2vh;border-top-right-radius: 62%;"></div>
             <div id="opcao_3_2" class="overlay">
-              <div id="opcao_3_2" class="overlay" style="    border-bottom-left-radius: 25%;    left: 16%;    top: 28.8%;    width: 5vh;"></div>
+             <div id="opcao_3_2" class="overlay" style="border-bottom-left-radius: 25%;left: 24%;top: 38.8%;width: 4vh;"></div>
             </div>
           </div>
 
           <div id="opcao_4">
             <div id="opcao_4_1" class="overlay"></div>
             <div id="opcao_4_2" class="overlay">
-              <div id="opcao_4_2" class="overlay" style="    top:-54.8%;    left: 81.3%;    height: 2.3vh;    width: 2.1vh;    border-bottom-right-radius: 52%;"></div>
+              <div id="opcao_4_2" class="overlay" style="top: -57.8%;left: 87.3%;height: 2.4vh;width: 2.9vh;border-bottom-right-radius: 52%;"></div>
             </div>
           </div>
 
-          <div id="opcao_5" class="overlay"></div>
+          <div id="opcao_5" class="overlay">
+            <div id="opcao_5_1" class="overlay"></div>
+          </div>
 
           <div id="opcao_6" class="overlay">
             <div id="opcao_6_1" class="overlay"></div>
@@ -287,10 +307,14 @@
             <div id="opcao_12_1" class="overlay"></div>
           </div>
 
-          <div id="opcao_13" class="overlay"></div>
+          <div id="opcao_13" class="overlay">
+            <div id="opcao_13_1" class="overlay" style="width: 9vh;z-index: 2;height: 1.2vh;top: 31.8%;left: 47%;"></div>
+          </div>
 
           <div id="opcao_14">
-            <div id="opcao_14_1" class="overlay"></div>
+            <div id="opcao_14_1" class="overlay">
+              <div id="opcao_14_1" class="overlay" style="width: 5vh; z-index: 2; height: 1vh; top: 88.8%; left: 47%;"></div>
+            </div>
             <div id="opcao_14_2" class="overlay"></div>
             <div id="opcao_14_3" class="overlay"></div>
           </div>
@@ -299,12 +323,14 @@
             <div id="opcao_15_1" class="overlay"></div>
             <div id="opcao_15_2" class="overlay"></div>
             <div id="opcao_15_3" class="overlay"></div>
-            <div id="opcao_15_4"class="overlay"style="left: 1vh; width: 8vh"></div>
+            <div id="opcao_15_4"class="overlay"></div>
           </div>
 
           <div id="opcao_16">
             <div id="opcao_16_1" class="overlay"></div>
-            <div id="opcao_16_2" class="overlay"></div>
+            <div id="opcao_16_2" class="overlay">
+              <div id="opcao_16_2" class="overlay" style="top: 58.2%;width:7.5vh;height: 4vh;left: 13%;"></div>
+            </div>
             <div id="opcao_16_3" class="overlay"></div>
           </div>
 
@@ -356,7 +382,7 @@
         <div id="quiz"></div>
         <div id="textos">
           <div id="textinho2"></div>
-          <h1 id="reposta" onclick="show_respostas(this)" style="text-align: center;">respostas</h1>
+          <h2 id="reposta" onclick="show_respostas(this)" style="text-align: center;    margin: 0;">respostas</h2>
                 
           <br>
               </br>
@@ -606,8 +632,10 @@
         id="btn_ajuda"
         onclick="inicio_popup()"
       >
-        help
+        add
       </span>
+
+    <span class='material-icons icons' id='replay' onclick='fimpropaganda()'>replay</span>
     </div>
   </body>
 </html>
