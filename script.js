@@ -366,7 +366,7 @@ tela_textos = () => {
     tempo = undefined;
 
     //Remover Overlays
-    document.getElementById("caminho").src = "caminho.png";
+    document.getElementById("caminho").src = "caminhonovo.png";
     // document.getElementById("caminho").style.zIndex = 3
 
     //Responder todas
@@ -393,7 +393,7 @@ tela_textos = () => {
       document.getElementById("select_" + qtd).disabled = true;
       qtd++;
     }
-
+    
     document.getElementById("overlay").style.animationName = "acerto_sumir";
     document.getElementById("overlay").style.animationFillMode = "forwards";
     document.getElementById("fim_popup").style.animationName = "acerto_sumir";
@@ -584,7 +584,6 @@ fim_popup = (estado) => {
   document.getElementById("overlay").style.display = "inherit";
 
   document.getElementById("fim_popup").style.animationName = "acerto";
-
   setTimeout(() => {
     document.getElementById("fim_popup").style.display = "flex";
   }, 1000);

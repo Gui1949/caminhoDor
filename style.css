@@ -698,7 +698,7 @@ h1 {
 #opcao_18_3a,
 #opcao_18_3 {
   top: 78.1%;
-  width: 4.6vh;
+  width: 4.8vh;
   height: 4vh;
   left: 82.6%;
 }
@@ -840,9 +840,8 @@ h1 {
 }
 
 #botao_continuar {
-  margin-top: 3vh;
   display: none;
-  z-index: 100;
+  z-index: 200;
   top: 84%;
   position: absolute;
 
