@@ -462,7 +462,7 @@ h1 {
   border-bottom-right-radius: 6%;
 }
 #opcao_6_1 {
-  top: -19%;
+  top: -30%;
   border-bottom-right-radius: 10%;
   height: 1.5vh;
   left: 37%;
@@ -573,8 +573,8 @@ h1 {
 }
 #opcao_13a,
 #opcao_13 {
-  top: 22%;
-  height: 1.4vh;
+  top: 21.9%;
+  height: 1.5vh;
   left: 65.6%;
   width: 6.7vh;
 }
@@ -612,14 +612,14 @@ h1 {
 #opcao_15_2 {
   top: 23.2%;
   left: 27%;
-  width: 5.7vh;
+  width: 5.8vh;
   height: 2vh;
 }
 #opcao_15_3a,
 #opcao_15_3 {
-  top: 22%;
-  left: 6.3%;
-  width: 6.5vh;
+  top: 21.8%;
+  left: 6.9%;
+  width: 6.7vh;
   height: 3.2vh;
  
 }
@@ -661,7 +661,7 @@ h1 {
 #opcao_17a,
 #opcao_17 {
   top: 76.7%;
-  height: 1.1vh;
+  height: 1.2vh;
   left: 72.6%;
   width: 9vh;
 }
@@ -854,7 +854,7 @@ h1 {
   border-color: #01ea77;
   position: absolute;
   height: 80%;
-  width: 85%;
+  width: 84.8%;
   margin-top: 1vh;
   left: 0;
   right: 0;
