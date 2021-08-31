@@ -386,7 +386,7 @@ tela_textos = () => {
     tempo = undefined;
 
     //Remover Overlays
-    document.getElementById("caminho").src = "caminho.png";
+    document.getElementById("caminho").src = "caminhonovo.png";
     // document.getElementById("caminho").style.zIndex = 3
 
     //Responder todas
