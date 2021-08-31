@@ -78,7 +78,7 @@ h1 {
   /* transform: scale(1); */
   /* animation: go-back 40s infinite alternate; */
   /* animation-name: wallpaper; */
-  filter: blur(0.8vh) brightness(55%);
+
 }
 
 #landing {
@@ -144,7 +144,7 @@ h1 {
   margin-right: auto;
     margin-left: auto;
   max-width: 47vh;
-    min-width: 47vh;
+    min-width: 46.9vh;
     max-height: 77vh;
     min-height: 75vh;
   padding-top: 5vh;
