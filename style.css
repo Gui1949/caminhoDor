@@ -580,10 +580,13 @@ h1 {
 }
 #opcao_14_1a,
 #opcao_14_1 {
-  top: 16.6%;
-  height: 4.2vh;
-  left: 70.2%;
-  width: 9vh;
+  border-top-left-radius: 31%;
+  top: 45%;
+  height: 3.6vh;
+  left: 33.3%;
+  width: 6.8vh;
+  transform: rotate(-28deg);
+  border-bottom-left-radius: 52%;
 }
 #opcao_14_2a,
 #opcao_14_2 {
@@ -691,9 +694,9 @@ h1 {
 #opcao_18_2a,
 #opcao_18_2 {
   border-bottom-left-radius: 32%;
-  top: 76.2%;
+  top: 76%;
   width: 3vh;
-  height: 1.1vh;
+  height: 1.2vh;
   left: 60.14%;
 }
 #opcao_18_3a,
