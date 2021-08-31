@@ -423,13 +423,13 @@ h1 {
 }
 #opcao_4_1a,
 #opcao_4_1 {
-  border-top-left-radius: 35%;
+  border-top-left-radius: 31%;
   top: 45%;
   height: 3.6vh;
   left: 33.3%;
   width: 6.8vh;
-  transform: rotate(-29deg);
-  border-bottom-left-radius: 78%;
+  transform: rotate(-28deg);
+  border-bottom-left-radius: 52%;
 
 }
 #opcao_4_2a,
@@ -580,13 +580,10 @@ h1 {
 }
 #opcao_14_1a,
 #opcao_14_1 {
-  border-top-left-radius: 31%;
-  top: 45%;
-  height: 3.6vh;
-  left: 33.3%;
-  width: 6.8vh;
-  transform: rotate(-28deg);
-  border-bottom-left-radius: 52%;
+  top: 16.6%;
+  height: 4.2vh;
+  left: 70.2%;
+  width: 9vh;
 }
 #opcao_14_2a,
 #opcao_14_2 {
@@ -852,6 +849,11 @@ h1 {
 }
 
 #branco {
+  border: solid;
+ 
+  border-color: black;
+  border-width: inherit; 
+
   background-color: white;
   display: none;
   border-color: #01ea77;
