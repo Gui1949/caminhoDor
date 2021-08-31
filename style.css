@@ -92,6 +92,7 @@ h1 {
 }
 
 #descricao_landing {
+  line-height: 135%;
   height: 40vh;
   overflow-y: scroll;
   width: 60vh;
@@ -1017,7 +1018,7 @@ h1 {
     padding-right: 1vh;
     height: 55vh;
     overflow-y: scroll;
-    font-size: 5.5vw;
+    font-size: 3.5vw;
   }
 
 

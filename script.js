@@ -38,7 +38,7 @@ window.onload = function() {
   document.getElementById("master").style.animationName = "acerto_sumir"
 }
 inicio_img1 = () => {
-  
+  document.getElementById("img_1").style.width = "135%";
   document.getElementById("landing").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto";
   document.getElementById("botao_continuar").style.animationName = "acerto";
@@ -61,6 +61,7 @@ inicio_img1 = () => {
 };
 
 img_trocar3 = () => {
+  document.getElementById("img_1").style.width = "100%";
   document.getElementById("img_1").style.animationName = "acerto_sumir";
   document.getElementById("menu").style.animationName = "acerto_sumir";
  
@@ -75,6 +76,7 @@ img_trocar3 = () => {
   }, 1);  
 };
 img_trocar4 = () => {
+  document.getElementById("img_1").style.width = "123%";
   document.getElementById("menu").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto_sumir";
  
