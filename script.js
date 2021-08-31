@@ -903,9 +903,9 @@ fimpropaganda = () => {
   document.getElementById("propaganda").innerHTML +=
     "<h2 style='color: white;'>Saiba tudo sobre dor no <a href='https://www.dorcronica.blog.br/'style='color: white;'>www.dorcronica.blog.br</a></h2>";
     document.getElementById("propaganda").innerHTML +=
-    "<h2Criação: Julio Troncoso, PhD</h2>";
+    "<h2 style='color: white;margin-bottom: 0;font-size: 2.7vh;'>Criação: Julio Troncoso, PhD</h2>";
     document.getElementById("propaganda").innerHTML +=
-    "<h2Revisão: Dra. Lais Akcelrud</h2>";
+    "<h2 style='color: white;margin-top: 0;font-size: 2.7vh;'>Revisão: Dra. Lais Akcelrud</h2>";
     document.getElementById("propaganda").innerHTML +=
     "<div id='femodal' onclick='window.location.reload()'><p>OK</p></div>";
 };
