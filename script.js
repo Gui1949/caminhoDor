@@ -42,12 +42,13 @@ inicio_img1 = () => {
   document.getElementById("landing").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto";
   document.getElementById("botao_continuar").style.animationName = "acerto";
-  document.getElementById("img_1").src = "caminho_numm.png";
-  document.getElementById("img_1").style.zIndex = "198";
+  
   document.getElementById("landing_bkg").src = "";
   document.getElementById("landing_bkg").style.backgroundColor = "black";
 
   setTimeout(() => {
+    document.getElementById("img_1").src = "caminho_numm.png";
+  document.getElementById("img_1").style.zIndex = "198";
     document.getElementById("menu").style.zIndex = "16";
     document.getElementById("botao_continuar").style.display = "flex";
     document
@@ -60,41 +61,47 @@ inicio_img1 = () => {
 };
 
 img_trocar3 = () => {
-  document.getElementById("menu").style.display = "none";
   document.getElementById("img_1").style.animationName = "acerto_sumir";
+  document.getElementById("menu").style.animationName = "acerto_sumir";
+ 
+ 
   setTimeout(() => {
-    document.getElementById("img_1").src = "caminhocompleto_num.jpg";
+    document.getElementById("menu").style.display = "none";
     document.getElementById("img_1").style.animationName = "acerto";
+    document.getElementById("img_1").src = "caminhocompleto_num.jpg";
     document
       .getElementById("botao_continuar")
       .setAttribute("onclick", "img_trocar4()");
   }, 1);  
 };
 img_trocar4 = () => {
+  document.getElementById("menu").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto_sumir";
-  $("#menu").empty();
+ 
   setTimeout(() => { 
+    $("#menu").empty();
   document.getElementById("menu").innerHTML += "<p>Visão ampliada do que ocorre nessa região dorsal</p>";
   document.getElementById("menu").style.display = "flex";
   document.getElementById("menu").style.margin = "0";
-  document.getElementById("img_1").src = "caminhozomm_num.jpg";
   document.getElementById("img_1").style.animationName = "acerto";
+  document.getElementById("img_1").src = "caminhozomm_num.jpg";
   document
     .getElementById("botao_continuar")
     .setAttribute("onclick", "img_trocar5()");
-    
   }, 1);
 };
 img_trocar5 = () => {
+  document.getElementById("img_1").style.display = "none";
+  document.getElementById("menu").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto_sumir";
-  $("#menu").empty();
- 
-  setTimeout(() => { 
+  document.getElementById("img_1").style.width = "100%";
+  setTimeout(() => {
+  $("#menu").empty(); 
   document.getElementById("menu").innerHTML += "<p>E o que são os números?  </p>";
   document.getElementById("menu").style.display = "flex";
-  document.getElementById("menu").style.margin = "0";
+  document.getElementById("img_1").style.display = "flex";
   document.getElementById("img_1").src = "caminho_textos.jpg";
-  document.getElementById("img_1").style.width = "100%";
+
   document.getElementById("img_1").style.animationName = "acerto";
   document
     .getElementById("botao_continuar")
@@ -104,22 +111,35 @@ img_trocar5 = () => {
 
 };
 img_trocar6 = () => {
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("img_1").style.display = "none";
+  document.getElementById("quizf").style.display = "flex";
   $("#menu").empty();
   setTimeout(() => { 
-  document.getElementById("menu").innerHTML += "<h4>Os números são as etapas cruciais no Caminho da Dor</h4>";
-  document.getElementById("img_1").src = "caminho_textos.jpg";
   document
     .getElementById("botao_continuar")
     .setAttribute("onclick", "img_trocar7()");
   }, 1);
 };
 img_trocar7 = () => {
-  document.getElementById("menu").innerHTML += "<p>OBJETIVO: RELACIONAR AS ETAPAS COM OS RESPECTIVOS NÚMEROS</p>";
+  $("#header_deskf").empty();
+  document.getElementById("header_deskf").innerHTML += "<h3>OBJETIVO: RELACIONAR AS ETAPAS COM OS RESPECTIVOS NÚMEROS, </h3>";
   document.getElementById("menu").style.display = "none";
   document.getElementById("img_1").src = "caminho_textos.jpg";
   document
     .getElementById("botao_continuar")
     .setAttribute("onclick", "inicio_popup()");
+   ( function mudar() {
+      let allBox = document.querySelectorAll(".combo1");
+           for (let index = 0; index < allBox.length; index++) {
+             allBox[index].style.backgroundColor = "rgb(2 140 72)";
+             allBox[index].style.border = "solid";
+             allBox[index].style.borderColor = "#01ea77";
+             
+         }
+   })();
+
+   
 };
 
 inicio_popup = () => {
@@ -366,7 +386,7 @@ tela_textos = () => {
     tempo = undefined;
 
     //Remover Overlays
-    document.getElementById("caminho").src = "caminhonovo.png";
+    document.getElementById("caminho").src = "caminho.png";
     // document.getElementById("caminho").style.zIndex = 3
 
     //Responder todas
@@ -393,7 +413,7 @@ tela_textos = () => {
       document.getElementById("select_" + qtd).disabled = true;
       qtd++;
     }
-    
+
     document.getElementById("overlay").style.animationName = "acerto_sumir";
     document.getElementById("overlay").style.animationFillMode = "forwards";
     document.getElementById("fim_popup").style.animationName = "acerto_sumir";
@@ -425,7 +445,8 @@ tela_textos = () => {
       textinho();
     }, 1000);
   } else {
-    erro("Finalize o questionário para acessar essa função.");
+    erro("Finalize o questionário para  acessar essa função.");
+    
   }
 };
 
@@ -584,6 +605,7 @@ fim_popup = (estado) => {
   document.getElementById("overlay").style.display = "inherit";
 
   document.getElementById("fim_popup").style.animationName = "acerto";
+
   setTimeout(() => {
     document.getElementById("fim_popup").style.display = "flex";
   }, 1000);

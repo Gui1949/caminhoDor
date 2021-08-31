@@ -228,6 +228,7 @@ h1 {
 }
 #textos > h1{
 font-size: 3.5vh;
+margin-top: 1.5vh;
 }
 #textos > h2{
   font-size: 4.5vh;
@@ -1433,7 +1434,7 @@ h2{
 
 @media screen and (orientation: landscape) {
   #img_1 {
-    width: 115%;
+    width: 111%;
     height: 100%;
   }
 }
@@ -1532,4 +1533,57 @@ text-align: center;
 }
 h4{
   margin: 10px;
+}
+
+#quizf{
+  padding-top: 87px;
+  max-width: 41vh;
+  min-width: 41vh;
+  height: 70vh;
+  display: none;
+  color: white;
+  flex-direction: column;
+  padding-right: 5vh;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  width: 88vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  justify-items: space-between;
+  background-color: black;
+}
+@media screen and (orientation: portrait) {
+  #acerto_alert {
+    width: 75%;
+    
+  }
+}
+#header_deskf{
+  top:0;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+
+    width: 46vh;
+    height: 10.8vh;
+    background-color: #2e2e33;
+} 
+#selecionar{
+  padding-left: 4vh;
+}
+
+.combo1 {
+  background-color: #2e2e33;
+  height: 5vh;
+  width: 7vh;
+  font-size: 2vh;
+  border: 0;
+  color: white;
+  border-color:#fe0000;
+}
+#header_deskf>h3{
+  font-size: 2.5vh;
+  margin: 1vh;
 }
