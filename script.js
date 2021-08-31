@@ -38,7 +38,7 @@ window.onload = function() {
   document.getElementById("master").style.animationName = "acerto_sumir"
 }
 inicio_img1 = () => {
-  document.getElementById("img_1").style.width = "135%";
+  document.getElementById("img_1").style.width = "100%";
   document.getElementById("landing").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto";
   document.getElementById("botao_continuar").style.animationName = "acerto";
@@ -76,7 +76,7 @@ img_trocar3 = () => {
   }, 1);  
 };
 img_trocar4 = () => {
-  document.getElementById("img_1").style.width = "123%";
+  document.getElementById("img_1").style.width = "100%";
   document.getElementById("menu").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto_sumir";
  
@@ -902,6 +902,10 @@ fimpropaganda = () => {
     "<a href='https://www.dorcronica.blog.br/'style='color: white;'><img  src='./logo-quadrado2.png' id='logo' style='z-index: 2' alt='' /></a>";
   document.getElementById("propaganda").innerHTML +=
     "<h2 style='color: white;'>Saiba tudo sobre dor no <a href='https://www.dorcronica.blog.br/'style='color: white;'>www.dorcronica.blog.br</a></h2>";
+    document.getElementById("propaganda").innerHTML +=
+    "<h2Criação: Julio Troncoso, PhD</h2>";
+    document.getElementById("propaganda").innerHTML +=
+    "<h2Revisão: Dra. Lais Akcelrud</h2>";
     document.getElementById("propaganda").innerHTML +=
     "<div id='femodal' onclick='window.location.reload()'><p>OK</p></div>";
 };
