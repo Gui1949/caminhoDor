@@ -38,6 +38,7 @@ window.onload = function() {
   document.getElementById("master").style.animationName = "acerto_sumir"
 }
 inicio_img1 = () => {
+  document.getElementById("menu").style.margin = "0";
   document.getElementById("img_1").style.width = "100%";
   document.getElementById("landing").style.animationName = "acerto_sumir";
   document.getElementById("img_1").style.animationName = "acerto";
@@ -125,7 +126,7 @@ img_trocar6 = () => {
 };
 img_trocar7 = () => {
   $("#header_deskf").empty();
-  document.getElementById("header_deskf").innerHTML += "<h3>OBJETIVO: RELACIONAR AS ETAPAS COM OS RESPECTIVOS NÚMEROS, </h3>";
+  document.getElementById("header_deskf").innerHTML += "<h3>OBJETIVO: RELACIONAR AS ETAPAS COM OS RESPECTIVOS NÚMEROS(<span class='material-icons texto'style='color: yellow;border-radius: 100%;'> help </span>), </h3>";
   document.getElementById("menu").style.display = "none";
   document.getElementById("img_1").src = "caminho_textos.jpg";
   document

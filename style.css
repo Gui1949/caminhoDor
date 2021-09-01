@@ -844,7 +844,7 @@ h1 {
 #botao_continuar {
   display: none;
   z-index: 200;
-  top: 83vh;
+  top: 80vh;
   position: absolute;
 
 }
